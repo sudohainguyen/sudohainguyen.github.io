@@ -1,16 +1,13 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Thanks for being here ¯\_(ツ)_/¯
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Hai Nguyen, Harry in short. I'm a nerdy guy doing stuff in the ML world.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
+Beside typing and clicking as my daily basis, I love coffee and reading, would love to have chit chat with you about these stuff.
 
 ### My story
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+[TBD]
