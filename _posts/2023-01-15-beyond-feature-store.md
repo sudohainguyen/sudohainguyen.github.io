@@ -8,7 +8,7 @@ tags: [mlops,data engineering]
 We have been working with Machine Learning models, cooking raw data into golden features for the models. Including me, we have been doing stuff manually and we also have been questioning where to put cooked features properly, in our local machine? We have heard there is a Feature Store as a saviour with tons of new concepts and functionalities, but there are two common concerns we all been through:
 
 1. How to use it seamlessly?
-2. I desire more, there is any other alternatives?
+2. I desire more, there are any other alternatives?
 
 ## The rewind
 
