@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Beyond Feature Store: What we all desire."
+title: "Beyond Feature Store: What we all desire. - Part 1"
 subtitle: Yes, we need Feature Store, how to use?
-tags: [mlops,data_engineering]
+tags: [mlops,data engineering]
 ---
 
 ## Quick rewind

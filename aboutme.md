@@ -21,4 +21,5 @@ Spark, ML System, Feature Platform, Distributed System.
 Data drift detection, OLAP data eco-system, CI/CD for ML models, Database System, Product Management.
 
 ### Featured Posts
-[TBD]
+- [Feature store](https://sudohainguyen.github.io/2023-01-15-beyond-feature-store/)
+- [Expectation management](https://sudohainguyen.github.io/2022-12-01-expectation-management/)

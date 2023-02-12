@@ -5,7 +5,7 @@ subtitle: "Yes, we all aim high, but are we aiming the same point?"
 cover-img: /assets/img/exp.jpeg
 thumbnail-img: https://brainsandbeards.com/static/8ed2e98b7029581b146c0a9c83b75b72/38260/expectations.jpg
 share-img: /assets/img/exp.jpeg
-tags: [product_management]
+tags: [product management]
 ---
 
 <p align = "center">
