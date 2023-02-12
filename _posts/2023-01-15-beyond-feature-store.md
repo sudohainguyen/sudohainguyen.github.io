@@ -8,13 +8,13 @@ tags: [mlops,data_engineering]
 ## Quick rewind
 
 Ok first let's go through what we already know about feature store.
-<!-- 
+
 <p align = "center">
 <img src = "https://en.meming.world/images/en/7/7a/It%27s_Rewind_time.jpg">
 </p>
 <p align = "center">
 It's rewind time.
-</p> -->
+</p>
 
 
 ### What are the features in Machine Learning?
