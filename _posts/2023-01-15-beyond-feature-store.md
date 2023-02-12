@@ -5,12 +5,12 @@ subtitle: Yes, we need Feature Store, but how to use?
 tags: [mlops,data engineering]
 ---
 
-We have been working with Machine Learning models, cooking raw data into golden features for the models. Including me, we been doing stuff manually and we also have been questioning where to put cooked features properly, in our local machine? Or individual's folder on remote storage? We have heard there is a Feature Store as a saviour with tons of new concepts and functionalities, but there are two common concerns we all been through:
+We have been working with Machine Learning models, cooking raw data into golden features for the models. Including me, we been doing stuff manually and we also have been questioning where to put cooked features properly, in our local machine? We have heard there is a Feature Store as a saviour with tons of new concepts and functionalities, but there are two common concerns we all been through:
 
 1. How to use it seemlessly?
 2. I desire more, there is any other alternatives?
 
-## Quick rewind
+## The rewind
 
 Ok first let's go through what we already know about feature store.
 
@@ -18,7 +18,6 @@ Ok first let's go through what we already know about feature store.
 <img src = "https://en.meming.world/images/en/7/7a/It%27s_Rewind_time.jpg">
 </p>
 <p align = "center">
-It's rewind time.
 </p>
 
 
@@ -45,8 +44,16 @@ Consequently, the team can have more capable of focusing on other critical parts
 
 1. Data governance: more well-organized data from feature store helps the organization to keep track of data access and permissions, including the ability to enforce security and privacy policies.
 2. Business analysis: by pruning time-consuming tasks, there will be more room for conducting analysis in deep with less distraction of engineering stuff.
-3. 
+3. Pipeline optimization: With the independence of feature store, we can less care where we have to produce clean data to fit into feature engineering pipeline. There are always more room for optimization in deep to save operational and computational cost by pursuing better data engineering practices (data lakehouse, query engine, etc..) to serve the data in more efficient way.
 
 
-It is gaining attraction from organizations to implement it into their ML systems, but most of the time there is still a struggle that stakeholders find hard to start implementing. I believe these are also 
+## The state
+Thanks to the promissing functionalities feature stores provide, it is gaining attraction from organizations to implement into their ML system, but most of the time there is still a struggle that stakeholders find hard to start implementing the component.
 
+Various of new concepts to get familiar for both managers and team members, in order to finalize a true north to follow. More collaboration will be also required, based on the new concepts, to make things work smoothly. For example, features name convention have to be defined consistently by everyone, this helps others quickly catch up the previous works. Another pain point of feature store is that it is not possible to track the lineage of any derived features and the quality of the output vector.
+
+## Conclusion
+
+To summarize, we all agreed that feature store is necessary but we desire more from it, which are usability, comprehensibility and reliability. As of now, this still needs to be involved by a lot of manual works.
+
+However in the last few months, there has been a significant evolution to grow into a Feature Engineering Platform or in short, feature platform. In part two, we will look at the resolution it has to resolve above concerns.
