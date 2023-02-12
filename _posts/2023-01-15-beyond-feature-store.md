@@ -1,9 +1,14 @@
 ---
 layout: post
 title: "Beyond Feature Store: What we all desire. - Part 1"
-subtitle: Yes, we need Feature Store, how to use?
+subtitle: Yes, we need Feature Store, but how to use?
 tags: [mlops,data engineering]
 ---
+
+We have been working with Machine Learning models, cooking raw data into golden features for the models. Including me, we been doing stuff manually and we also have been questioning where to put cooked features properly, in our local machine? Or individual's folder on remote storage? We have heard there is a Feature Store as a saviour with tons of new concepts and functionalities, but there are two common concerns we all been through:
+
+1. How to use it seemlessly?
+2. I desire more, there is any other alternatives?
 
 ## Quick rewind
 
@@ -34,11 +39,13 @@ Simple, a feature store is where all features are defined, stored, and can be se
 4. Feature access and retrieval: Interfaces are provided to easily retrieve features for batch processing or in low-latency for (near) real-time prediction based on a particular situation. 
 5. Monitoring and performance: Tools for monitoring the performance of features, including metrics such as feature usage, processing times, and model accuracy.
 
+## The long-term impact
 
 Consequently, the team can have more capable of focusing on other critical parts. For example:
 
 1. Data governance: more well-organized data from feature store helps the organization to keep track of data access and permissions, including the ability to enforce security and privacy policies.
-2. Business analysis: 
+2. Business analysis: by pruning time-consuming tasks, there will be more room for conducting analysis in deep with less distraction of engineering stuff.
+3. 
 
 
 It is gaining attraction from organizations to implement it into their ML systems, but most of the time there is still a struggle that stakeholders find hard to start implementing. I believe these are also 
