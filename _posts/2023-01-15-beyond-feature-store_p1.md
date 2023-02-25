@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Beyond Feature Store: What we all desire - Part 2"
+title: "Beyond Feature Store: What we all desire - Part 1"
 subtitle: Yes, we need Feature Store, but how to use?
 tags: [mlops,data engineering]
 ---
@@ -34,7 +34,9 @@ A feature is a data point with these following criteria:
 </p>
 <p align = "center">
 </p>
-  
+
+Firstly, about numeric data, it simply is the information which is transformed, encoded from raw data based on business or insight rules. The information is captured at a specific time in the past as a snapshot to let us know exactly what happened back then. Finally, to answer what thing all these stuff belongs to, `entity` is where you should look at.
+
 ### So, What is the feature store?
 As it's called, a feature store is where all features are stored and can be served from as a centralized place. Feature store makes sure users can get the features correctly as defined above, without duplication.
 
