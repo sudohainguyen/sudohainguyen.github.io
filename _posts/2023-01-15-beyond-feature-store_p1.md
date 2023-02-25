@@ -38,7 +38,7 @@ Features play a crucial role in machine learning, they expose complex patterns f
 ### So, What is the feature store?
 As it's called, a feature store is `an abstract layer` working as a place where all features are stored and can be served from. Feature store makes sure users can get the features correctly as defined above, without duplication.
 
-In additional, technically, feature store also manages metadata of every features in it, including creation time, owner, description, etc... 
+Technically, a feature store is combined by sub-components which are well defined in this [blog](https://www.tecton.ai/blog/what-is-a-feature-store/). We can see each one manage a corresponding flow to end up serving features in various way to meet user's needs, with additional management ability.
 
 Where do we place it in our data ecosystem?
 
