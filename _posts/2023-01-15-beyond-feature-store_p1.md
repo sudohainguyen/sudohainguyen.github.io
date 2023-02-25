@@ -25,8 +25,6 @@ Ok first let's go through what we already know about feature store.
 
 As we know, features are characteristic of a specific entity (user, merchant, promotion, etc..) in the real world at a specific time. Features can be derived from raw data and transformed in various ways, such as scaling, normalization, or aggregation, to improve the quality and consistency of the data.
 
-Features play a crucial role in machine learning, they expose complex patterns from entities, such as user transaction behaviour, for ML models to learn and make predictions. The quality of features mostly has a major impact on the performance of a model. We obviously met this term `Garbage in garbage out` since the day we involved in the ML world. As a result, Data Scientists usually spend significant time and effort, back and forth selecting and engineering features.
-
 A feature is a data point with these following criteria:
 
 <p align = "center">
@@ -36,6 +34,8 @@ A feature is a data point with these following criteria:
 </p>
 
 Firstly, about numeric data, it simply is the information which is transformed, encoded from raw data based on business or insight rules. The information is captured at a specific time in the past as a snapshot to let us know exactly what happened back then. Finally, to answer what thing all these stuff belongs to, `entity` is where you should look at.
+
+Features play a crucial role in machine learning, they expose complex patterns from entities, such as user transaction behaviour, for ML models to learn and make predictions. The quality of features mostly has a major impact on the performance of a model. We obviously met this term `Garbage in garbage out` since the day we involved in the ML world. As a result, Data Scientists usually spend significant time and effort, back and forth selecting and engineering features.
 
 ### So, What is the feature store?
 As it's called, a feature store is `an abstract layer` working as a place where all features are stored and can be served from. Feature store makes sure users can get the features correctly as defined above, without duplication.
