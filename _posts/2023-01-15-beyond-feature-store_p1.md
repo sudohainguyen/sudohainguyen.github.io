@@ -38,7 +38,7 @@ A feature is a data point with these following criteria:
 Firstly, about numeric data, it simply is the information which is transformed, encoded from raw data based on business or insight rules. The information is captured at a specific time in the past as a snapshot to let us know exactly what happened back then. Finally, to answer what thing all these stuff belongs to, `entity` is where you should look at.
 
 ### So, What is the feature store?
-As it's called, a feature store is an abstract layer working as a place where all features are stored and can be served from. Feature store makes sure users can get the features correctly as defined above, without duplication.
+As it's called, a feature store is `an abstract layer` working as a place where all features are stored and can be served from. Feature store makes sure users can get the features correctly as defined above, without duplication.
 
 In additional, technically, feature store also manages metadata of every features in it, including creation time, owner, description, etc... 
 
