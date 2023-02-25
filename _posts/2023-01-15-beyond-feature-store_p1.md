@@ -38,10 +38,19 @@ A feature is a data point with these following criteria:
 Firstly, about numeric data, it simply is the information which is transformed, encoded from raw data based on business or insight rules. The information is captured at a specific time in the past as a snapshot to let us know exactly what happened back then. Finally, to answer what thing all these stuff belongs to, `entity` is where you should look at.
 
 ### So, What is the feature store?
-As it's called, a feature store is where all features are stored and can be served from as a centralized place. Feature store makes sure users can get the features correctly as defined above, without duplication.
+As it's called, a feature store is an abstract layer working as a place where all features are stored and can be served from. Feature store makes sure users can get the features correctly as defined above, without duplication.
+
 In additional, technically, feature store also manages metadata of every features in it, including creation time, owner, description, etc... 
 
-In general, it brings more ability and benefits to the team as well as leadership in terms of:
+Where do we place it in our data ecosystem?
+
+<p align = "center">
+<img src = "/assets/img/fs_in_ecosys.png">
+</p>
+<p align = "center">
+</p>
+
+As it stands between data warehouses and ML jobs, it brings more ability and benefits to the team as well as leadership in terms of:
 
 1. Data storage: A centralized place to store features, produced from other upstream data sources. The data source can be either relational databases or distributed data storage systems, such as Hadoop or Spark. Feature store streamlines the operations to get raw data ready for being processed and transformed into features.
 2. Feature management: Tools for organizing, versioning, and managing features, including the ability to track changes and compare versions of features. `feature discovery` and `feature registry` help team members can explore, comprehend, and reuse features built by each other, which saves dedicated work from the members and reduce duplicated data produced by individuals. Meanwhile, integrating consistent materialization flow from the feature store is also supported in good practice across team.
