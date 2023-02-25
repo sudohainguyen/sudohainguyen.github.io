@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Beyond Feature Store: What we all desire - Part 1"
+title: "Beyond Feature Store: What we all desire - Part 2"
 subtitle: Yes, we need Feature Store, but how to use?
 tags: [mlops,data engineering]
 ---
@@ -25,12 +25,20 @@ Ok first let's go through what we already know about feature store.
 
 As we know, features are characteristic of a specific entity (user, merchant, promotion, etc..) in the real world at a specific time. Features can be derived from raw data and transformed in various ways, such as scaling, normalization, or aggregation, to improve the quality and consistency of the data.
 
-Features play a crucial role in machine learning, they expose complex patterns from entities, such as user transaction behaviour, for ML models to learn and make predictions. The quality of features mostly has a major impact on the performance of a model. We obviously met this term `Garbage in garbage out` since the day we involved in the ML world.
+Features play a crucial role in machine learning, they expose complex patterns from entities, such as user transaction behaviour, for ML models to learn and make predictions. The quality of features mostly has a major impact on the performance of a model. We obviously met this term `Garbage in garbage out` since the day we involved in the ML world. As a result, Data Scientists usually spend significant time and effort, back and forth selecting and engineering features.
 
-As a result, Data Scientists usually spend significant time and effort, back and forth selecting and engineering features.
+A feature is a data point with these following criteria:
+
+<p align = "center">
+<img src = "/assets/img/feature.png">
+</p>
+<p align = "center">
+</p>
   
 ### So, What is the feature store?
-Simple, a feature store is where all features are defined, stored, and can be served from as a centralized place. In general, it brings more ability and benefits to the team as well as leadership in terms of:
+As it's called, a feature store is where all features are stored and can be served from as a centralized place. Feature store makes sure users can get the features correctly as defined above, without duplication.
+
+In general, it brings more ability and benefits to the team as well as leadership in terms of:
 
 1. Data storage: A centralized place to store features, produced from other upstream data sources. The data source can be either relational databases or distributed data storage systems, such as Hadoop or Spark. Feature store streamlines the operations to get raw data ready for being processed and transformed into features.
 2. Feature management: Tools for organizing, versioning, and managing features, including the ability to track changes and compare versions of features. `feature discovery` and `feature registry` help team members can explore, comprehend, and reuse features built by each other, which saves dedicated work from the members and reduce duplicated data produced by individuals. Meanwhile, integrating consistent materialization flow from the feature store is also supported in good practice across team.
