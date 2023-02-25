@@ -8,7 +8,7 @@ share-img: /assets/img/path.jpg
 tags: [software engineering]
 ---
 
-Assuming that you have a function that calculte a metric to fullfill a specific business need, but your team need it as well, are we going to tell your team to copy the code in some files in some repositories? Sounds that still works, now imagine we have 100 of functions like that...
+Assuming that you have a function that calculte a metric to fulfill a specific business need, but your team need it as well, are we going to tell your team to copy the code in some files in some repositories? Sounds that still works, now imagine we have 100 of functions like that...
 
 ## Introduction
 
