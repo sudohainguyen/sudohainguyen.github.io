@@ -27,13 +27,11 @@ As we know, features are characteristic of a specific entity (user, merchant, pr
 
 A feature is a data point with these following criteria:
 
-<p align = "center">
-<img src = "/assets/img/feature.png">
-</p>
-<p align = "center">
-</p>
+![Features Definition](/assets/img/feature.png){: .mx-auto.d-block :}
 
-Firstly, about numeric data, it simply is the information which is transformed, encoded from raw data based on business or insight rules. The information is captured at a specific time in the past as a snapshot to let us know exactly what happened back then. Finally, to answer what thing all these stuff belongs to, `entity` is where you should look at.
+Firstly, about numeric data, it simply is the information which is aggregated, transformed, encoded from raw data based on business or insight rules. The information is captured at a specific time in the past as a snapshot to let us know exactly what happened back then. Finally, to answer what thing all these stuff belongs to, `entity` is where you should look at. Optionally, time dimension is also needed to fulfill the characteristic of target entity. For example: 
+
+![Example](/assets/img/feat_example.png){: .mx-auto.d-block :}
 
 Features play a crucial role in machine learning, they expose complex patterns from entities, such as user transaction behaviour, for ML models to learn and make predictions. The quality of features mostly has a major impact on the performance of a model. We obviously met this term `Garbage in garbage out` since the day we involved in the ML world. As a result, Data Scientists usually spend significant time and effort, back and forth selecting and engineering features.
 
@@ -44,11 +42,7 @@ In additional, technically, feature store also manages metadata of every feature
 
 Where do we place it in our data ecosystem?
 
-<p align = "center">
-<img src = "/assets/img/fs_in_ecosys.png">
-</p>
-<p align = "center">
-</p>
+![Feature Store in Data Ecosystem](/assets/img/fs_in_ecosys.png){: .mx-auto.d-block :}
 
 As it stands between data warehouses and ML jobs, it brings more ability and benefits to the team as well as leadership in terms of:
 
