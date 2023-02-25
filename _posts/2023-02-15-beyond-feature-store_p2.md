@@ -24,14 +24,21 @@ To increase usability of features, they are expected to be monitored by users vi
 3. Lineage: track all the way from raw upstream data to anchor features and derived features.
 
 
-### Backfill controll capability
+### Backfill control capability
+
+![Backfill control](/assets/img/backfill.png){: .mx-auto.d-block :}
+
+As we observed, data goes from data warehouse to feature platform only one way as readers. But what if users desire historical features much longer in the past? Should users have to talk to Platform maintainer to conduct backfill or they have to do by themself on another platform? FP is expected to let users can decide which timerange to process backfill if needed with less human effort as possible.
 
 
 ### Self-serving and Streaming aggregation
-As [well stated](https://huyenchip.com/2023/01/08/self-serve-feature-platforms.html) by Huyen Chip, we can see these are two points that high-end Feathr Feature Platform is tackling.
-One is from human process and one is from implementation limitation.
+As [well stated](https://huyenchip.com/2023/01/08/self-serve-feature-platforms.html) by Huyen Chip, we can see these are two points that high-end Feathr Feature Platform is tackling. One is from human process and one is from implementation limitation.
 
 ## Feature Store as a component
-Beside feature store, which is the core component of Feature Platform, there are several tools
+Beside feature store, which is the core component of Feature Platform, there are several tools can be integrated under the hood:
+
+- Airflow: FP should be capable of controling airflow, to conduct backfill on requested, generate new DAG to compute new features, etc...
+- Great Expectation/Deequ: all data flows through FP is expected to be checked/validated before furthre processes. For example, we validate feature tables to ensure that it follows business rules, or validate entity table users' input. With data validation functionalities, we can early detect issue happening to our system.
+- OpenLineage: is an open platform for collection and analysis of data lineage. It tracks metadata about datasets, jobs, and runs, giving users the information required to identify the root cause of complex issues and understand the impact of changes.
 
 
