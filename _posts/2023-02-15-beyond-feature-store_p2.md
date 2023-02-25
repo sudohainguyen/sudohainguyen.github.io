@@ -41,4 +41,5 @@ Beside feature store, which is the core component of Feature Platform, there are
 - Great Expectation/Deequ: all data flows through FP is expected to be checked/validated before furthre processes. For example, we validate feature tables to ensure that it follows business rules, or validate entity table users' input. With data validation functionalities, we can early detect issue happening to our system.
 - OpenLineage: is an open platform for collection and analysis of data lineage. It tracks metadata about datasets, jobs, and runs, giving users the information required to identify the root cause of complex issues and understand the impact of changes.
 
-
+## Conclusion
+To summarize, there are a lot of problem to tackle for Feature Platform to get mature enough for self-serving capability. Consequently, may be self-serving is not the true north of FP? Should it be operated as a team as product instead, like we already have with Data Platform.
