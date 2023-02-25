@@ -40,13 +40,14 @@ Firstly, about numeric data, it simply is the information which is transformed, 
 ### So, What is the feature store?
 As it's called, a feature store is where all features are stored and can be served from as a centralized place. Feature store makes sure users can get the features correctly as defined above, without duplication.
 
+In additional, technically, feature store also manages metadata of every features in it, including creation time, owner, description, etc... 
+
 In general, it brings more ability and benefits to the team as well as leadership in terms of:
 
 1. Data storage: A centralized place to store features, produced from other upstream data sources. The data source can be either relational databases or distributed data storage systems, such as Hadoop or Spark. Feature store streamlines the operations to get raw data ready for being processed and transformed into features.
 2. Feature management: Tools for organizing, versioning, and managing features, including the ability to track changes and compare versions of features. `feature discovery` and `feature registry` help team members can explore, comprehend, and reuse features built by each other, which saves dedicated work from the members and reduce duplicated data produced by individuals. Meanwhile, integrating consistent materialization flow from the feature store is also supported in good practice across team.
-3. Collaborative feature engineering: The ability to conduct customization on features transformation and computations to extend existing features to build more advanced features for the team.
-4. Feature access and retrieval: Interfaces are provided to easily retrieve features for batch processing or in low latency for (near) real-time prediction based on a particular situation.
-5. Monitoring and performance: Tools for monitoring the performance of features, including metrics such as feature usage, processing times, and model accuracy.
+3. Feature access and retrieval: Interfaces are provided to easily retrieve features for batch processing or in low latency for (near) real-time prediction based on a particular situation.
+4. Monitoring and performance: Tools for monitoring the performance of features, including metrics such as feature usage, processing times, and model accuracy.
 
 ## The long-term impact
 
@@ -60,7 +61,11 @@ Consequently, the team can have more capable of focusing on other critical parts
 ## The state
 Thanks to the promising functionalities feature stores provide, it is gaining attraction from organizations to implement into their ML system, but most of the time there is still a struggle that stakeholders find hard to start implementing the component.
 
-Various new concepts to get familiar for both managers and team members, in order to finalize a true north to follow. More collaboration will be also required, based on the new concepts, to make things work smoothly. For example, features name conventions have to be defined consistently by everyone, this helps others quickly catch up with the previous works. Another pain point of feature store is that it is not possible to track the lineage of any derived features and the quality of the output vector.
+Various new concepts to get familiar for both managers and team members, in order to finalize a true north to follow. More collaboration will be also required, based on the new concepts, to make things work smoothly.
+
+For example: about collaborative feature engineering, it's the ability to conduct customization on sharable features transformation and computations to extend existing features to build more advanced features for the team.
+
+Another example, features name conventions have to be defined consistently by everyone, this helps others quickly catch up with the previous works. Another pain point of feature store is that it is not possible to track the lineage of any derived features and the quality of the output vector.
 
 ## Conclusion
 
