@@ -38,19 +38,19 @@ Finally, open-source projects often have multiple contributors, each with their 
 
 ## How to get started?
 
-Don't pressure yourself into taking on overly ambitious tasks to build a new feature or fix critical bugs on the issue list, that would make you go nowhere in terms of either your learning or impact on the project. Instead, pick a project that is related to your daily basis tasks or maybe you are the actual user of the tools, this will help you have a good starting and a chance to deep dive into the underlying mechanism of the tool.
+Don’t pressure yourself into taking on overly ambitious tasks to build a new feature or fix critical bugs on the issue list, that would make you go nowhere in terms of either your learning or impact on the project. Instead, pick a project that is related to your daily basis tasks or maybe you are the actual user of the tools, this will help you have a good starting and a chance to deep dive into the underlying mechanism of the tool.
 
 One of my very first open-source projects was Feast and at that time I was using it to build a feature engineering platform for my primary job. As a user, I discovered there are some functionalities that should be added and this is when I joined the project. As a result, I made a significant contribution by escalating Feast BigQuery offline store scalability by 10 times.
 
 These are my suggestion to get your hands dirty in a new project:
 
-1. Fork the repository to your own account and get yourself through `Contribution guidelines`. The document usually tell us about setting up development environment, principles (e.g. naming convention, commit format,...).
-2. Prepare your development environment, including: programming language version, lint check tools, testing tools.
-3. At all cost, try to run successfully every unit tests without any significant errors.
+1. Fork the repository to your own account and get yourself through Contribution guidelines. The document usually tells us about setting up development environment, and principles (e.g. naming convention, commit format,...).
+2. Prepare your development environment, including the programming language version, lint check tools, and testing tools.
+3. At all costs, try to run successfully every unit test without any significant errors.
 4. (Optional) Go through examples to understand current functionalities if they are provided.
 
 Now you are ready to start working on the project.
 
 # Conclusion
 
-Contributing to Open Source projects is not the silver bullet to build up yourself, this is just one of many ways to grow your skills. But if you want to get started, do it selectively and I believe it is still worth it to spend some effort, isn't it?
+Contributing to Open Source projects is not the silver bullet to build up yourself, this is just one of many ways to grow your skills. But if you want to get started, do it selectively and I believe it is still worth it to spend some effort, isn’t it?
