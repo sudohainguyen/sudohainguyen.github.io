@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Lessons learned on contributing to Open Source projects"
+title: "Lessons learned on contributing to Open Source projects"
 subtitle: Why don't you try?
 cover-img: /assets/img/passion.jpg
 thumbnail-img: /assets/img/code_screen.jpg
