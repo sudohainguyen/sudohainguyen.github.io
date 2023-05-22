@@ -127,6 +127,8 @@ And this is the result:
 - add engine factory test cases
 ```
 
+Doesn't it look cool? I can easily generate a release note from the commit history. This is a great way to keep your users informed about the latest changes and improvements to your products.
+
 
 ## Conclusion
 This maybe look simple but it is a good start to build up your team's culture, furthermore it might boost your team productivity as well. I hope you can find this article useful and apply it to your daily basis. Thanks for reading!
