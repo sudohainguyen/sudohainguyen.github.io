@@ -7,12 +7,12 @@ thumbnail-img: /assets/img/github.jpg
 tags: [engineering, craftmanship]
 ---
 
-If you've been actively using git in your daily work, you might be familiar with the concept of Git commit convention. However, have you considered the potential benefits these messages hold for your future and the success of your team? In this article, I will explain how incorporating Git commit convention into your everyday routine can greatly enhance your team's productivity.
+If you’ve been actively using git in your daily work, you might be familiar with the concept of Git commit convention. However, have you considered the potential benefits these messages hold for your future and the success of your team? In this article, I will explain how incorporating Git commit convention into your everyday routine can greatly enhance your team’s productivity.
 
 
 ## What does convention mean?
 
-A "convention" refers to a set of agreed-upon guidelines or rules that govern the structure, format, and content of commit messages in a Git repository. These conventions aim to standardize the way developers communicate their changes and intentions when committing code.
+A “convention” refers to a set of agreed-upon guidelines or rules that govern the structure, format, and content of commit messages in a Git repository. These conventions aim to standardize the way developers communicate their changes and intentions when committing code.
 
 ## How about git commit convention?
 
@@ -47,7 +47,7 @@ Signed-off-by: <YOUR_NAME> <YOUR_EMAIL>
 5. Reference related issues: If your commit relates to an issue or bug, reference it in the commit message using the issue number or link. (could be either Jira ticket or repo issue)
 6. Sign off your commit: If you are contributing to an open-source project, it's important to sign off your commit using your full name and email address. This helps to track who contributed to the project.
 
-Let's see what I can do with the above rules, imagine I have these commit messages after running command `git log --pretty=format:"%s" HEAD~10..HEAD`
+Let’s see what I can do with the above rules, imagine I have these commit messages after running command `git log --pretty=format:"%s" HEAD~10..HEAD`
 
 ```
 chore: minor refactor
@@ -127,8 +127,8 @@ And this is the result:
 - add engine factory test cases
 ```
 
-Doesn't it look cool? I can easily generate a release note from the commit history. This is a great way to keep your users informed about the latest changes and improvements to your products.
+Doesn’t it look cool? I can easily generate a release note from the commit history. This is a great way to keep your users informed about the latest changes and improvements to your products.
 
 
 ## Conclusion
-This maybe look simple but it is a good start to build up your team's culture, furthermore it might boost your team productivity as well. I hope you can find this article useful and apply it to your daily basis. Thanks for reading!
+This maybe looks simple but it is a good start to building up your team’s culture, furthermore, it might boost your team's productivity as well. I hope you can find this article useful and apply it to your daily basis. Thanks for reading!
