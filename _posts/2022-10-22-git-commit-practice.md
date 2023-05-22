@@ -18,15 +18,14 @@ A "convention" refers to a set of agreed-upon guidelines or rules that govern th
 
 When I introduce the concept of Git commit convention to my colleagues, they often ask me why it is necessary to follow a convention. They argue that it is not necessary to follow a convention because they can write whatever they want in their commit messages. However, I believe that following a convention is beneficial for both the individual and the team.
 
-In terms of collaboration, by following a convention, engineers ensure consistency and clarity in their commit messages, making it easier for team members to understand and navigate the commit history. This consistency is particularly valuable when working in a collaborative environment or when reviewing and debugging code. It helps create a shared understanding among team members and improves the overall maintainability and readability of the codebase. Assuming that you are a developer who has just joined a new team, you will find it much easier to understand the codebase and get up to speed if the team has a convention in place. You will be able to quickly grasp the purpose of each commit and the changes it introduces, as well as the context in which it was made.
-
 <p align = "center">
 <img src = "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3269&q=80">
 </p>
 <p align = "center">
 Photo by <a href="https://unsplash.com/@cytonn_photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cytonn Photography</a> on <a href="https://unsplash.com/photos/n95VMLxqM2I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
 </p>
+
+In terms of collaboration, by following a convention, engineers ensure consistency and clarity in their commit messages, making it easier for team members to understand and navigate the commit history. This consistency is particularly valuable when working in a collaborative environment or when reviewing and debugging code. It helps create a shared understanding among team members and improves the overall maintainability and readability of the codebase. Assuming that you are a developer who has just joined a new team, you will find it much easier to understand the codebase and get up to speed if the team has a convention in place. You will be able to quickly grasp the purpose of each commit and the changes it introduces, as well as the context in which it was made.
 
 On the other hand, when your team build a library, product, or service, it is important to have a release note each time a new version upcoming. By following a convention, you can easily generate a release note from the commit history. This is a great way to keep your users informed about the latest changes and improvements to your product or service.
 
