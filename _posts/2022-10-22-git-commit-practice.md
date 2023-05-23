@@ -2,7 +2,7 @@
 layout: post
 title: "Git commit convention: How to"
 subtitle: "Use your daily basis to power up your team"
-cover-img: /assets/img/git_screen.jpg
+cover-img: /assets/img/git_screen.png
 thumbnail-img: /assets/img/github.jpg
 tags: [engineering, craftmanship]
 ---
