@@ -29,7 +29,16 @@ A feature is a data point with these following criteria:
 
 ![Features Definition](/assets/img/feature.png){: .mx-auto.d-block :}
 
-Firstly, about numeric data, it simply is the information which is aggregated, transformed, encoded from raw data based on business or insight rules. The information is captured at a specific time in the past as a snapshot to let us know exactly what happened back then. Finally, to answer what thing all these stuff belongs to, `entity` is where you should look at. Optionally, time dimension is also needed to fulfill the characteristic of target entity. For example: 
+`entity` is obviously the first thing we should look at, this is a primary object we're working on to collect data from. The `cut off timestamp` determines the latest timestamp at which the data of an entity is considered valid for feature calculation. Any data beyond this specific timestamp is excluded before performing feature calculations.
+
+<p align = "center">
+<img src = "https://featuretools.alteryx.com/en/stable/_images/retail_ct.png">
+</p>
+<p align = "center">
+Cut Off Timestamp illustration (Source: Featuretools documentation)
+</p>
+
+`Observed value` is calculated from the extracted data with `Data points`, usually combined with `Aggregation methods` to produce a single value as a summarization of what happened back then. Optionally, time dimension is also needed to fulfill the characteristic of target entity. For example: 
 
 ![Example](/assets/img/feat_example.png){: .mx-auto.d-block :}
 
