@@ -5,7 +5,7 @@ subtitle: Yes, we need Feature Store, but how to use?
 tags: [mlops,data engineering]
 ---
 
-We have been working with Machine Learning models, cooking raw data into golden features for the models. Including me, we have been doing stuff manually and we also have been questioning where to put cooked features properly, in our local machine? We have heard there is a Feature Store as a saviour with tons of new concepts and functionalities, but there are two common concerns we all been through:
+We have been working with Machine Learning models, cooking raw data into golden features for the models. Including me, we have been doing stuff manually and we also have been questioning where to put cooked features properly, like in our local machine? We have heard there is a Feature Store as a savior with tons of new concepts and functionalities, but there are two common concerns we have all been through:
 
 1. How to use it seamlessly?
 2. We desire more, but what are our expectations?
@@ -25,7 +25,7 @@ Ok first let's go through what we already know about feature store.
 
 As we know, features are characteristic of a specific entity (user, merchant, promotion, etc..) in the real world at a specific time. Features can be derived from raw data and transformed in various ways, such as scaling, normalization, or aggregation, to improve the quality and consistency of the data.
 
-A feature is a data point with these following criteria:
+A feature is a data point with the following criteria:
 
 ![Features Definition](/assets/img/feature.png){: .mx-auto.d-block :}
 
@@ -38,7 +38,7 @@ A feature is a data point with these following criteria:
 Cut Off Timestamp illustration (Source: Featuretools documentation)
 </p>
 
-`Observed value` is calculated from the extracted data with `Data points`, usually combined with `Aggregation methods` to produce a single value as a summarization of what happened back then. Optionally, time dimension is also needed to fulfill the characteristic of target entity. For example: 
+`Observed value` is calculated from the extracted data (`Data points`), usually combined with `Aggregation methods` to produce a single value as a summarization of what happened back then. Optionally, the time dimension is also needed to fulfill the characteristic of the target entity. For example:
 
 ![Example](/assets/img/feat_example.png){: .mx-auto.d-block :}
 
@@ -47,7 +47,7 @@ Features play a crucial role in machine learning, they expose complex patterns f
 ### So, What is the feature store?
 As it's called, a feature store is `an abstract layer` working as a place where all features are stored and can be served from. Feature store makes sure users can get the features correctly as defined above, without duplication.
 
-Technically, a feature store is combined by sub-components which are well defined in this [blog](https://www.tecton.ai/blog/what-is-a-feature-store/). We can see each one manage a corresponding flow to end up serving features in various way to meet user's needs, with additional management ability.
+Technically, a feature store is combined by sub-components which are well defined in this [blog](https://www.tecton.ai/blog/what-is-a-feature-store/). We can see each one manage a corresponding flow to end up serving features in various ways to meet users' needs, with additional management ability.
 
 Where do we place it in our data ecosystem?
 
@@ -56,7 +56,7 @@ Where do we place it in our data ecosystem?
 As it stands between data warehouses and ML jobs, it brings more ability and benefits to the team as well as leadership in terms of:
 
 1. Data storage: A centralized place to store features, produced from other upstream data sources. The data source can be either relational databases or distributed data storage systems, such as Hadoop or Spark. Feature store streamlines the operations to get raw data ready for being processed and transformed into features.
-2. Feature management: Tools for organizing, versioning, and managing features, including the ability to track changes and compare versions of features. `feature discovery` and `feature registry` help team members can explore, comprehend, and reuse features built by each other, which saves dedicated work from the members and reduce duplicated data produced by individuals. Meanwhile, integrating consistent materialization flow from the feature store is also supported in good practice across team.
+2. Feature management: Tools for organizing, versioning, and managing features, including the ability to track changes and compare versions of features. `feature discovery` and `feature registry` help team members can explore, comprehend, and reuse features built by each other, which saves dedicated work from the members and reduce duplicated data produced by individuals. Meanwhile, integrating consistent materialization flow from the feature store is also supported in good practice across teams.
 3. Feature access and retrieval: Interfaces are provided to easily retrieve features for batch processing or in low latency for (near) real-time prediction based on a particular situation.
 4. Monitoring and performance: Tools for monitoring the performance of features, including metrics such as feature usage, processing times, and model accuracy.
 
@@ -74,9 +74,9 @@ Thanks to the promising functionalities feature stores provide, it is gaining at
 
 Various new concepts to get familiar for both managers and team members, in order to finalize a true north to follow. More collaboration will be also required, based on the new concepts, to make things work smoothly.
 
-For example: about collaborative feature engineering, it's the ability to conduct customization on sharable features transformation and computations to extend existing features to build more advanced features for the team.
+For example: collaborative feature engineering, it's the ability to conduct customization on sharable features transformation and computations to extend existing features to build more advanced features for the team.
 
-Another example, features to be defined consistently by everyone in the team, this helps others quickly catch up with the previous works. It's been a pain point of feature store because as of now it is not possible to track the lineage of any derived features and monitor its usage.
+Another example is, features should be defined consistently by everyone in the team, this helps others quickly catch up with the previous works. It's been a pain point for feature store because as of now it is not possible to track the lineage of any derived features and monitor its usage.
 
 ## Conclusion
 
