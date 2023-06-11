@@ -21,8 +21,9 @@ author: sudohainguyen
 
 navbar-links:
   Topics:
-    - Engineering: "https://beautifuljekyll.com"
-    - Product Management: "https://www.markdowntutorial.com/"
+    - MLOps: "https://sudohainguyen.github.io/tags/#mlops"
+    - Data Engineering: "https://sudohainguyen.github.io/tags/#data%20engineering"
+    - Craftmanship: "https://sudohainguyen.github.io/tags/#craftmanship"
   About Me: "aboutme"
 
 ################
