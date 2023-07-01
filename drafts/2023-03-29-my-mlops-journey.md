@@ -9,7 +9,7 @@ tags: [engineering, career, experience]
 
 In today's data-driven world, the demand for machine learning models has skyrocketed, leading organizations to invest heavily in their AI capabilities. However, building and deploying machine learning models efficiently is not a straightforward task. This is where MLOps (Machine Learning Operations) engineers come into play. In this blog post, I will uncover my journey as an MLOps engineer so far and share some of the lessons I have learned along the way.
 
-
+**Quick access:**
 - [The Role of an MLOps Engineer](#the-role-of-an-mlops-engineer)
 - [Day-to-Day Tasks as an MLOps Engineer:](#day-to-day-tasks-as-an-mlops-engineer)
   - [Building Internal Platforms:](#building-internal-platforms)
@@ -21,8 +21,6 @@ In today's data-driven world, the demand for machine learning models has skyrock
   - [Which is the better way to go: Dedicated vs Platform oriented?](#which-is-the-better-way-to-go-dedicated-vs-platform-oriented)
   - [Core Skill Set of an MLOps Engineer:](#core-skill-set-of-an-mlops-engineer)
 - [Conclusion](#conclusion)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 # The Role of an MLOps Engineer

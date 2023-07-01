@@ -12,6 +12,25 @@ Docker has revolutionized the way we build, package, and deploy applications. It
 
 In this post, we'll explore some best practices for writing Dockerfiles that will help you build better images and also share my own experience in building Docker images for my **Python** projects.
 
+**Quick access:**
+- [1. Background](#1-background)
+  - [1.1. What is a Dockerfile?](#11-what-is-a-dockerfile)
+  - [1.2. Why is it important to build a good image?](#12-why-is-it-important-to-build-a-good-image)
+- [2. Dockerfile Practices](#2-dockerfile-practices)
+  - [2.1. Use a base image](#21-use-a-base-image)
+  - [2.2. Leverage layer caching](#22-leverage-layer-caching)
+  - [2.3. Use multi-stage builds](#23-use-multi-stage-builds)
+  - [2.4. Don't include unnecessary files](#24-dont-include-unnecessary-files)
+  - [2.5. Some other minor tips](#25-some-other-minor-tips)
+    - [Assign explicitly tags to images](#assign-explicitly-tags-to-images)
+    - [Grouping related operations](#grouping-related-operations)
+    - [Try not to expose root user](#try-not-to-expose-root-user)
+- [3. Working with Dockerfiles effectively](#3-working-with-dockerfiles-effectively)
+  - [3.1. Use linting tools](#31-use-linting-tools)
+  - [3.2. Evaluate your changes](#32-evaluate-your-changes)
+- [4. Conclusion](#4-conclusion)
+- [References](#references)
+
 # 1. Background
 
 ## 1.1. What is a Dockerfile?
@@ -267,10 +286,11 @@ One of my favourite tool is [dive](https://github.com/jauderho/dive), which meas
 
 # 4. Conclusion
 
-Hope this can give you some idea to improve your Dockerfiles, you can ensure that your images are optimized for performance, security, and scalability. This will help you create better applications and save your own time and effort in the long run.
+Hope this can give you some idea to improve your Dockerfiles, you can ensure that your images are optimized for performance, security, and scalability. Hence you can create better applications and save your own time and effort in the long run.
 
 # References
 - [https://docs.docker.com/get-started/09_image_best/](https://docs.docker.com/get-started/09_image_best/)
 - [https://medium.com/@rdsubhas/docker-for-development-common-problems-and-solutions-95b25cae41eb](https://medium.com/@rdsubhas/docker-for-development-common-problems-and-solutions-95b25cae41eb)
 - [https://pythonspeed.com/articles/base-image-python-docker-images/](https://pythonspeed.com/articles/base-image-python-docker-images/)
 - [https://github.com/wagoodman/dive](https://github.com/wagoodman/dive)
+- [https://www.phillipsj.net/posts/hadolint-linting-your-dockerfile](https://www.phillipsj.net/posts/hadolint-linting-your-dockerfile)

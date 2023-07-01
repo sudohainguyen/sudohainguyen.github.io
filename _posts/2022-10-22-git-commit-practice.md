@@ -9,6 +9,11 @@ tags: [engineering, craftmanship]
 
 If you’ve been actively using git in your daily work, you might be familiar with the concept of Git commit convention. However, have you considered the potential benefits these messages hold for your future and the success of your team? In this article, I will explain how incorporating Git commit convention into your everyday routine can greatly enhance your team’s productivity.
 
+**Quick access:**
+- [What does convention mean?](#what-does-convention-mean)
+- [How about git commit convention?](#how-about-git-commit-convention)
+- [My favorite convention](#my-favorite-convention)
+- [Conclusion](#conclusion)
 
 ## What does convention mean?
 
