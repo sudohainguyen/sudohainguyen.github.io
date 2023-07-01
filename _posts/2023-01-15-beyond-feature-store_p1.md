@@ -2,6 +2,7 @@
 layout: post
 title: "Beyond Feature Store - Part 1: What we all desire"
 subtitle: Yes, we need Feature Store, but how to use?
+thumbnail-img: /assets/img/fp-thumbnail.jpeg
 tags: [mlops,data engineering]
 ---
 
