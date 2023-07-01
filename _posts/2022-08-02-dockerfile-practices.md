@@ -3,7 +3,7 @@ layout: post
 title: "Dockerfile practices"
 subtitle: "Power your application with well built Docker images"
 cover-img: /assets/img/containers.jpg
-thumbnail-img: https://images.unsplash.com/photo-1646627927863-19874c27316b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1828&q=80
+thumbnail-img: https://images.unsplash.com/photo-1509966756634-9c23dd6e6815?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1676&q=80
 share-img: /assets/img/containers.jpeg
 tags: [mlops,engineering]
 ---
@@ -58,6 +58,12 @@ Some common base image types include:
 - **Buster**: "Buster" is the codename for Debian 10, a stable Linux distribution.
   - Pros: Stable and widely supported, extensive package availability. 
   - Cons: Larger size compared to Alpine, potentially slower startup times.
+
+- **Bullseye**: "Bullseye" is the codename for Debian 11, another Linux distribution.
+  - Pros: Focuses on up-to-date software packages with improved hardware support and newer kernel.
+  - Cons: Some packages may still be undergoing stability testing. There will be potentially compatibility issues with older software or libraries that are not updated for Debian 11.
+
+My favourite base image type for building complex applycation is `buster` due to its stability and extensive package availability. Compared to `bullseye`, `buster` is more stable and has more packages available. However, if you are building a lightweight application, `alpine` is a good choice.
 
 ## 2.2. Leverage layer caching
 
@@ -250,11 +256,21 @@ USER myuser
 CMD ["python3", "app.py"]
 ```
 
+# 3. Working with Dockerfiles effectively
 
-# 3. Conclusion
+## 3.1. Use linting tools
+
+
+## 3.2. Evaluate your changes
+After applying good practices to improve your Dockerfiles, how can you know your changes are effective?
+One of my favourite tool is [dive](https://github.com/jauderho/dive), which measure the efficiency of your Dockerfile by analyzing the image layer by layer, displaying the file tree and highlighting the files that are taking up the most space.
+
+# 4. Conclusion
 
 Hope this can give you some idea to improve your Dockerfiles, you can ensure that your images are optimized for performance, security, and scalability. This will help you create better applications and save your own time and effort in the long run.
 
 # References
 - [https://docs.docker.com/get-started/09_image_best/](https://docs.docker.com/get-started/09_image_best/)
 - [https://medium.com/@rdsubhas/docker-for-development-common-problems-and-solutions-95b25cae41eb](https://medium.com/@rdsubhas/docker-for-development-common-problems-and-solutions-95b25cae41eb)
+- [https://pythonspeed.com/articles/base-image-python-docker-images/](https://pythonspeed.com/articles/base-image-python-docker-images/)
+- [https://github.com/wagoodman/dive](https://github.com/wagoodman/dive)

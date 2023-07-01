@@ -3,7 +3,7 @@ layout: post
 title: "Lessons learned on contributing to Open Source projects"
 subtitle: Why don't you try?
 cover-img: /assets/img/passion.jpg
-thumbnail-img: /assets/img/code_screen.jpeg
+thumbnail-img: https://images.unsplash.com/photo-1630514969818-94aefc42ec47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80
 tags: [engineering, career, experience]
 ---
 
