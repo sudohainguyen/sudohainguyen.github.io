@@ -2,7 +2,7 @@
 layout: post
 title: "My Journey as an MLOps Engineer"
 subtitle: "Challenging but rewarding"
-cover-img: /assets/img/mlops-cover.jpg
+cover-img: /assets/img/mlops-cover.jpeg
 thumbnail-img: /assets/img/mlops.jpeg
 tags: [engineering, career, experience]
 ---
@@ -18,7 +18,7 @@ Let's revisit the definition of MLOps engineer. According to [Google](https://cl
 
 Ideally, to smoothly deliver a sustainable ML project, an MLOps engineer play a role who connects the dots across cell teams, such as orchestrating, deploying and monitoring data and ML models. However, due to maturity of each organization, some teams may not have the luxury of having a dedicated MLOps team, they prefer to have a Data Scientist or Data Engineer to take care of the whole ML project, including integrating MLOps tools to boost their productivity. In this case, we need a centralized platform that can serve stakeholders for specific purposes (build, serve, monitor,...), which is built by a standalone MLOps team, this is also my MLOps story.
 
-## Day-to-Day Tasks of an MLOps Engineer:
+## Day-to-Day Tasks as an MLOps Engineer:
 
 ### Building Internal Platforms:
 One of the primary responsibilities is to design and build internal platforms to support the development and deployment of machine learning models. These platforms include:
@@ -48,7 +48,14 @@ Having your own product seems to be a dream for every engineer, but it's not alw
 
 ### Core Skill Set of an MLOps Engineer:
 
-Whoever you are working as, a dedicated engineer or a platform engineer, to excel in the role of an MLOps engineer, individuals should possess a diverse skill set, including:
+<p align = "center">
+<img src = "https://ml-ops.org/img/mlops-loop-en.jpg">
+</p>
+<p align = "center">
+MLOps typical loop (Source: ml-ops.org)
+</p>
+
+Whoever you are working as, a dedicated engineer or a platform engineer, to excel in the role of an MLOps engineer, individuals should possess a diverse skill set to fulfill the above tasks cycle, including:
 
 - Strong Software Engineering: Proficiency in programming languages like Python, knowledge of software
 development methodologies, and experience with version control systems (e.g., Git) are essential.
@@ -61,13 +68,6 @@ development methodologies, and experience with version control systems (e.g., Gi
 
 - Cloud Technologies: Experience with cloud platforms like AWS, Azure, or Google Cloud is advantageous. Knowledge of deploying and managing machine learning models in cloud environments is valuable.
 
-
-<p align = "center">
-<img src = "https://ml-ops.org/img/mlops-loop-en.jpg">
-</p>
-<p align = "center">
-MLOps skills (Source: ml-ops.org)
-</p>
 
 ## Conclusion
 TBD
