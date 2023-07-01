@@ -9,6 +9,17 @@ tags: [engineering, career, experience]
 
 To rapidly progress in your engineering career, it is advisable to learn from other engineers in your professional circle, such as colleagues, seniors, and friends especially when you are working on some immature area like MLOps. However, many individuals, myself included, often wonder how engineers from diverse companies, organizations, and countries approach their work without frequently changing their jobs. Engaging with open-source projects is an effective solution to this challenge. By contributing to such projects, you can gain valuable exposure to a variety of engineering perspectives and practices, which can broaden your understanding and improve your skills.
 
+**Quick access:**
+- [What does the term Open Source projects mean?](#what-does-the-term-open-source-projects-mean)
+- [Pros and Cons](#pros-and-cons)
+  - [The opportunities](#the-opportunities)
+  - [The challenges](#the-challenges)
+- [How to get started?](#how-to-get-started)
+- [Conclusion](#conclusion)
+
+
+
+
 ## What does the term Open Source projects mean?
 <p align = "center">
 <img src = "https://images.unsplash.com/photo-1569017388730-020b5f80a004?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80">
@@ -51,6 +62,6 @@ These are my suggestion to get your hands dirty in a new project:
 
 Now you are ready to start working on the project.
 
-# Conclusion
+## Conclusion
 
 Contributing to Open Source projects is not the silver bullet to build up yourself, this is just one of many ways to grow your skills. But if you want to get started, do it selectively and I believe it is still worth it to spend some effort, isn’t it?

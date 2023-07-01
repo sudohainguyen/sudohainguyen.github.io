@@ -11,6 +11,15 @@ We have been working with Machine Learning models, cooking raw data into golden 
 1. How to use it seamlessly?
 2. We desire more, but what are our expectations?
 
+**Quick access:**
+- [The rewind](#the-rewind)
+  - [What are the features in Machine Learning?](#what-are-the-features-in-machine-learning)
+  - [So, What is the feature store?](#so-what-is-the-feature-store)
+- [The long-term impact](#the-long-term-impact)
+- [The state](#the-state)
+- [Conclusion](#conclusion)
+
+
 ## The rewind
 
 Ok first let's go through what we already know about feature store.

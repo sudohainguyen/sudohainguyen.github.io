@@ -8,6 +8,17 @@ tags: [mlops,data engineering]
 
 We've been talking about feature store in [Part 1](https://sudohainguyen.github.io/2023-01-15-beyond-feature-store_p1/), there are some limitations to address to bring more better use for the team. There is a new concept has been gained attraction recently, Feature Platform.
 
+**Quick access:**
+- [Introduction](#introduction)
+- [What we should expect from a Feature Platform](#what-we-should-expect-from-a-feature-platform)
+  - [More robust monitoring](#more-robust-monitoring)
+  - [Backfill control capability](#backfill-control-capability)
+  - [Self-serving and Streaming aggregation](#self-serving-and-streaming-aggregation)
+- [Feature Store as a component](#feature-store-as-a-component)
+- [Conclusion](#conclusion)
+
+
+
 ## Introduction
 In [Part 1](https://sudohainguyen.github.io/2023-01-15-beyond-feature-store_p1/), we have been through some of my observations about definitions benefits of feature store, as well as its limitations in terms of implementation. Recently, Feature Engineering Platform or Feature Platform has been risen as an alternative,
 
