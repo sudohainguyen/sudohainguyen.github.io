@@ -25,5 +25,5 @@ Data drift detection, OLAP data eco-system, CI/CD for ML models, Database System
 - [Mini Lakehouse Project](https://github.com/sudohainguyen/mini-lakehouse/)
 
 ### Featured Posts
-- [Feature store](https://sudohainguyen.github.io/2023-01-15-beyond-feature-store/)
-- [Expectation management](https://sudohainguyen.github.io/2022-12-01-expectation-management/)
+- [Beyond Feature Store](https://sudohainguyen.github.io/2023-01-15-beyond-feature-store_p1/)
+- [Dockerfile practices](https://sudohainguyen.github.io/2022-08-02-dockerfile-practices/)
