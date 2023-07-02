@@ -10,7 +10,7 @@ tags: [mlops,engineering]
 
 Docker has revolutionized the way we build, package, and deploy applications. It provides a lightweight and portable platform that enables developers to create isolated containers, encapsulating applications and their dependencies. One of the key components of Docker is the Dockerfile, a simple yet powerful tool for defining and automating the creation of Docker images.
 
-In this post, we'll explore some best practices for writing Dockerfiles that will help you build better images and also share my own experience in building Docker images for my **Python** projects.
+In this post, we'll explore some best practices for writing Dockerfiles that will help you build better images and also share my own experience in building Docker images for my projects.
 
 **Quick access:**
 - [1. Background](#1-background)
@@ -123,13 +123,9 @@ FROM python:3.9 AS builder
 
 WORKDIR /app
 
-# Copy requirements file
 COPY requirements.txt .
-
-# Install dependencies
 RUN pip install --user --no-cache-dir -r requirements.txt
 
-# Copy application code
 COPY . .
 
 # Stage 2: Production stage
@@ -140,17 +136,13 @@ WORKDIR /app
 # Copy installed dependencies from the builder stage
 COPY --from=builder /root/.local /root/.local
 
-# Set environment variables
 ENV PATH=/root/.local/bin:$PATH
 ENV PYTHONUNBUFFERED=1
 
-# Expose port
 EXPOSE 5000
 
-# Copy application code
 COPY . .
 
-# Set the startup command
 CMD ["python", "app.py"]
 ```
 
@@ -241,13 +233,10 @@ Don't:
 ``` Dockerfile
 FROM python:3.9-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy application files
 COPY . /app
 
-# Run the application
 CMD ["python3", "app.py"]
 ```
 
@@ -256,15 +245,12 @@ Do:
 ``` Dockerfile
 FROM python:3.9-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy application files
 COPY . /app
 
 # Create a non-root user
 RUN groupadd -r myuser && useradd -r -g myuser myuser
-
 # Set ownership and permissions
 RUN chown -R myuser:myuser /app
 
@@ -278,11 +264,74 @@ CMD ["python3", "app.py"]
 # 3. Working with Dockerfiles effectively
 
 ## 3.1. Use linting tools
+Probably we don't remember all the good practices to apply to our daily work, until we actually need them. Then we will have to google and find out the best practices. So, how can we maintain the quality of our Dockerfiles consistently? The answer is linting tools.
 
+Linting tools are tools that analyze your code and provide feedback on potential issues. They can help you identify and fix problems before they become a problem. My favorite linting tool for Dockerfiles is [hadolint](https://github.com/hadolint/hadolint) which is a linter for Dockerfiles that checks for common errors and best practices and can be used as a command-line tool or integrated into your CI/CD pipeline as well. Let's see how it works, assume we have a bad Dockerfile like section [2.4](#24-dont-include-unnecessary-files)), hadolint will tell us what is wrong with it:
+
+``` bash
+docker run --rm -i hadolint/hadolint < Dockerfile
+# >>>
+# -:2 DL3045 warning: `COPY` to a relative destination without `WORKDIR` set.
+# -:3 DL3042 warning: Avoid use of cache directory with pip. Use `pip install --no-cache-dir <package>`
+```
+
+Another example, let's see how the tool fixes our example at [this section](#grouping-related-operations):
+
+``` bash
+docker run --rm -i hadolint/hadolint < Dockerfile
+# >>>
+# -:2 DL3009 info: Delete the apt-get lists after installing something
+# -:3 DL3008 warning: Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`
+# -:3 DL3015 info: Avoid additional packages by specifying `--no-install-recommends`
+# -:3 DL3059 info: Multiple consecutive `RUN` instructions. Consider consolidation.
+# -:4 DL3008 warning: Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`
+# -:4 DL3015 info: Avoid additional packages by specifying `--no-install-recommends`
+# -:4 DL3059 info: Multiple consecutive `RUN` instructions. Consider consolidation.
+# -:5 DL3042 warning: Avoid use of cache directory with pip. Use `pip install --no-cache-dir <package>`
+# -:5 DL3059 info: Multiple consecutive `RUN` instructions. Consider consolidation.
+```
 
 ## 3.2. Evaluate your changes
 After applying good practices to improve your Dockerfiles, how can you know your changes are effective?
-One of my favourite tool is [dive](https://github.com/jauderho/dive), which measure the efficiency of your Dockerfile by analyzing the image layer by layer, displaying the file tree and highlighting the files that are taking up the most space.
+I frequently use [dive](https://github.com/wagoodman/dive) to measure the efficiency of your Dockerfile by analyzing the image layer by layer, displaying the file tree and highlighting the files that are taking up the most space. Below is an example of how I integrate `dive` into my team's Gitlab CI pipelines to analyze built Docker images before pushing to the registry:
+
+``` yaml
+analyze-image:
+  stage: integration_test
+  image: docker:24.0.2-dind
+  services:
+    - name: docker:dind
+      command: [ "--tls=false" ]
+  needs:
+    - build-wheel
+  only:
+    - master
+    - merge_requests
+  script:
+    - docker build --no-cache -t my_image -f docker/Dockerfile .
+    - docker run --rm -e CI=true wagoodman/dive:latest my_image
+    - docker rmi my_image  # cleanup
+  tags:
+    - docker-build
+```
+And this is the result:
+```
+Status: Downloaded newer image for wagoodman/dive:latest
+  Using default CI config
+Image Source: docker://my_image
+Fetching image... (this can take a while for large images)
+Analyzing image...
+  efficiency: 98.8250 %
+  wastedBytes: 27202532 bytes (27 MB)
+  userWastedPercent: 2.0645 %
+Inefficient Files:
+Count  Wasted Space  File Path
+    5        3.9 MB  /var/cache/debconf/templates.dat
+    3        2.3 MB  /var/cache/debconf/templates.dat-old
+...
+```
+
+Voila! We can see there is still more room for improvement.
 
 # 4. Conclusion
 
