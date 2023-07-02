@@ -3,8 +3,7 @@ layout: post
 title: "Dockerfile practices"
 subtitle: "Power your application with well built Docker images"
 cover-img: /assets/img/containers.jpg
-thumbnail-img: https://images.unsplash.com/photo-1509966756634-9c23dd6e6815?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1676&q=80
-share-img: /assets/img/containers.jpeg
+thumbnail-img: /assets/img/dockerfile-thumbnail.jpeg
 tags: [mlops,engineering]
 ---
 

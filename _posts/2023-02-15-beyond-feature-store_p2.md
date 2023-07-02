@@ -2,7 +2,7 @@
 layout: post
 title: "Beyond Feature Store - Part 2: Feature Platform"
 subtitle: Which has maturity
-thumbnail-img: https://images.unsplash.com/photo-1586796676789-f6fe8cc276f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80
+thumbnail-img: /assets/img/platform-thumbnail.jpeg
 tags: [mlops,data engineering]
 ---
 
