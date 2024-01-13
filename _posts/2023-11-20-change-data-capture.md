@@ -50,6 +50,13 @@ To implement the CDC, we will need to add two items in our pipeline:
 - Service that listens for changes over rows in the database (Debezium)
 - Service that stream the data (Kafka)
 
+<p align = "center">
+<img src = "https://debezium.io/documentation/reference/stable/_images/debezium-server-architecture.png">
+</p>
+<p align = "center">
+Apply CDC pattern with Debezium and Kafka.
+</p>
+
 ## Cons
 
 In the real world, many develops and architects have been encountering some drawbacks.
