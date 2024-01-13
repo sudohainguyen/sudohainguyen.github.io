@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Change Data Capture (CDC) pattern: a real-time data synchronization solution"
+title: "Change Data Capture (CDC) pattern: another real-time data ingestion approach."
 subtitle: "To listen all the changes."
 cover-img: https://images.unsplash.com/photo-1641510653579-84da19c3208b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMja3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fa%3D%3D
 thumbnail-img: https://images.unsplash.com/photo-1628116709703-c1c9ad550d36?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMja3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fa%3D%3D
@@ -12,6 +12,8 @@ The system is using micro-services where the processing of data is broken up int
 
 **Quick access:**
 - [Motivation](#motivation)
+  - [Real-time Data Ingestion](#real-time-data-ingestion)
+  - [Event-driven approach](#event-driven-approach)
 - [Why to implement CDC?](#why-to-implement-cdc)
   - [Pros](#pros)
   - [Cons](#cons)
@@ -27,15 +29,25 @@ The system is using micro-services where the processing of data is broken up int
 
 # Motivation
 
+## Real-time Data Ingestion
+
 ![Changes from various sources](/assets/img/cdc-motivation.png){: .mx-auto.d-block :}
 
-We have some difference applications/services using the same database.
+In our production environment, multiple applications and services contribute to the same database using a microservices architecture. This decentralized setup triggers the need for effective handling of database changes, especially when records are updated.
 
-The system is using micro-services where the processing of data is broken up into smaller tasks. Each application enters its data into the database. You want to react to certain changes in the database — for example, when one of the records updates.
+We want to capture and store all the changes in production environment as soon as possible for downstream usage, such as: real-time reporting, historical data analysis, data quality monitoring, etc. so-called real-time data ingestion.
 
-> You want to avoid the situation that each application has its piece of code that sends a notification that something has been updated in the database.
+## Event-driven approach
 
-CDC (Change Data Capture) is a software design pattern that is used to monitor changes in data an perform certain actions based on data change. Mostly includes read, updated or delete operations.
+One of the most mature approaches to implement real-time data ingestion is to use an event-driven architecture. The idea is to observe what is happening in the data layer of the applications, i.e., which data is changing as a result of business operations, and to capture that set of changes in a message.
+
+![Event-driven approach](/assets/img/cdc-event-driven.png){: .mx-auto.d-block :}
+
+However, this requires extra effort from the engineers to:
+- Implement the mechanism
+- Maintain the consistency between two destinations.
+
+To address these challenges and streamline our approach, Change Data Capture (CDC) pattern serves as a solution for efficiently monitoring alterations in data and triggering designated actions based on those changes. Whether it involves reading, updating, or deleting operations, CDC enables a unified and centralized mechanism for tracking and responding to modifications in the shared database. By adopting CDC, we aim to enhance the manageability, consistency, and scalability of our system, providing a more cohesive and streamlined solution for handling data changes across our diverse range of applications and services.
 
 # Why to implement CDC?
 
