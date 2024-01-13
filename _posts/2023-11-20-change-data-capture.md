@@ -51,7 +51,7 @@ To implement the CDC, we will need to add two items in our pipeline:
 - Service that stream the data (Kafka)
 
 <p align = "center">
-<img src = "https://debezium.io/documentation/reference/stable/_images/debezium-server-architecture.png">
+<img src = "https://debezium.io/documentation/reference/stable/_images/debezium-architecture.png">
 </p>
 <p align = "center">
 Apply CDC pattern with Debezium and Kafka. (Source: Debezium Documentation)
