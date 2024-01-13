@@ -54,7 +54,7 @@ To implement the CDC, we will need to add two items in our pipeline:
 <img src = "https://debezium.io/documentation/reference/stable/_images/debezium-server-architecture.png">
 </p>
 <p align = "center">
-Apply CDC pattern with Debezium and Kafka.
+Apply CDC pattern with Debezium and Kafka. (Source: Debezium Documentation)
 </p>
 
 ## Cons
