@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dockerfile practices"
-subtitle: "Power your application with well built Docker images"
+subtitle: "Power your application with streamlined Dockerfiles"
 cover-img: /assets/img/containers.jpg
 thumbnail-img: /assets/img/dockerfile-thumbnail.jpeg
 tags: [mlops,engineering]
