@@ -7,7 +7,7 @@ thumbnail-img: https://images.unsplash.com/photo-1628116709703-c1c9ad550d36?q=80
 tags: [data-engineering]
 ---
 
-There are various way to conduct data ingestion, depends on the strategy we want to use the ingested data. Change Data Capture (CDC) is one approach to implement data ingestion at low latency, which is suitable for near real-time data consumption.
+There are various ways to conduct data ingestion, depending on the strategy we want to use the ingested data. Change Data Capture (CDC) is one approach to implement data ingestion at low latency, which is suitable for near real-time data consumption.
 
 **Quick access:**
 
@@ -38,15 +38,15 @@ There are various way to conduct data ingestion, depends on the strategy we want
 
 In our production environment, multiple applications and services contribute to the same database using a microservices architecture. This decentralized setup triggers the need for effective handling of database changes, especially when records are updated.
 
-We want to capture and store all the changes in production environment as soon as possible for downstream usage, such as: real-time reporting, historical data analysis, data quality monitoring, etc. So how many ways can we do that?
+We want to capture and store all the changes in the production environment as soon as possible for downstream usage, such as real-time reporting, historical data analysis, data quality monitoring, etc. So how many ways can we do that?
 
 Summarized from this [post](https://medium.com/the-modern-scientist/the-art-of-data-ingestion-powering-analytics-from-operational-sources-467552d6c9a2), the goal of data ingestion is to move data **from one or more sources to a destination** where it can be stored and further analyzed, specifically Data Platform. We have various ways to conduct data ingestion, the way we implement it depends on the use case and how performant we want it to be.
 
 In the world of big data, two common approaches are:
 
-- **Batch processing (ETL):** The data is collected, processed, and loaded into the destination in batches with schedule interval, usually at night when the system is not in use.
+- **Batch processing (ETL):** The data is collected, processed, and loaded into the destination in batches with scheduled intervals, usually at night when the system is not in use.
 
-- **Stream processing (ELT):** Every records produced in production environment will be ingested into the destination as soon as possible prior to be transformed in furthur steps. This approach is suitable for use cases that requires data to be instantly consumed.
+- **Stream processing (ELT):** All records produced in the production environment will be ingested into the destination as soon as possible before being transformed in further steps. This approach is suitable for use cases that require data to be instantly consumed.
 
 ![ETL vs ELT](/assets/img/cdc-etl-elt.png){: .mx-auto.d-block :}
 <p align = "center">
@@ -55,7 +55,7 @@ ETL vs ELT (Source: <a href="https://medium.com/the-modern-scientist/the-art-of-
 
 ### Event sourcing approach
 
-One of the most mature approaches to implement real-time data ingestion is to use an event-driven architecture. The idea is to observe what is happening in the data layer of the applications, i.e., which data is changing as a result of business operations, and to capture that set of changes in a message.
+One of the most mature approaches to implementing real-time data ingestion is to use an event-driven architecture. The idea is to observe what is happening in the data layer of the applications, i.e., which data is changing as a result of business operations, and to capture that set of changes in a message.
 
 ![Event sourcing approach](/assets/img/cdc-event-driven.png){: .mx-auto.d-block :}
 
@@ -161,9 +161,9 @@ The two core services provided in this article are Event Sourcing and also Chang
 
 ## Conclusion
 
-So we know that Change Data Capture pattern can tackle some of the problems as a framework to build a real-time data synchronization solution, which is a common requirement in many organizations, we also see a plenty of drawbacks as well.
+So we know that Change Data Capture pattern can tackle some of the problems as a framework to build a real-time data synchronization solution, which is a common requirement in many organizations, we also see plenty of drawbacks as well.
 
-Building distributed event-driven systems is always challenging, since Event Sourcing is a mature pattern and it is worth to consider as the first move. Choose the right approach for your use case.
+Building distributed event-driven systems is always challenging since Event Sourcing is a mature pattern and it is worth considering as the first move. Choose the right approach for your use case.
 
 ## Reference
 
