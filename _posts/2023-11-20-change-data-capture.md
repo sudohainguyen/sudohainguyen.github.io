@@ -71,8 +71,13 @@ The idea of CDC is to observe what is happening in the data layer of the applica
 
 To implement the CDC, we will need to add two items in our pipeline:
 
-- Service that listens for changes over rows in the database (Debezium)
-- Service that stream the data (Kafka)
+- Service that listens for changes over rows in the database
+- Service that stream the data
+
+![Concept to implement CDC](/assets/img/cdc-concept.png)
+<p align = "center">
+Concept to implement CDC
+</p>
 
 The example below is a simple implementation of CDC using Debezium and Kafka. The service listens to the changes in the database and publishes the changes to Kafka.
 
