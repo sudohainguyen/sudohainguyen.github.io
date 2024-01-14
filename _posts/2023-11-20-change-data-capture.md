@@ -148,3 +148,4 @@ Building distributed event-driven systems is always challenging, since Event Sou
 - [Distributed Data for Microservices — Event Sourcing vs. Change Data Capture](https://debezium.io/blog/2020/02/10/event-sourcing-vs-cdc/)
 - [Change Data Capture (CDC) - Pattern Or antipattern? – avenga](https://www.avenga.com/magazine/change-data-capture/)
 - [Listen to Database changes with apache Kafka](https://medium.com/geekculture/listen-to-database-changes-with-apache-kafka-35440a3344f0)
+- [Data Ingestion Patterns - Medium](https://medium.com/the-modern-scientist/the-art-of-data-ingestion-powering-analytics-from-operational-sources-467552d6c9a2)
