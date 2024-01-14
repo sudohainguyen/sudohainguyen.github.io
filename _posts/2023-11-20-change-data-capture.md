@@ -17,6 +17,9 @@ There are various way to conduct data ingestion, depends on the strategy we want
 - [Implementing CDC in the real world](#implementing-cdc-in-the-real-world)
 - [Considering implementing CDC?](#considering-implementing-cdc)
   - [Benefits](#benefits)
+    - [Reduced Latency](#reduced-latency)
+    - [Simplified Change Tracking](#simplified-change-tracking)
+    - [Enhance data security](#enhance-data-security)
   - [Drawbacks](#drawbacks)
     - [CDC per data source](#cdc-per-data-source)
     - [Data meaning](#data-meaning)
@@ -90,7 +93,21 @@ Apply CDC pattern with Debezium and Kafka.
 
 ### Benefits
 
+As well-listed in [this article](https://hevodata.com/learn/benefits-of-change-data-capture/#:~:text=CDC%20Definition,-Image%20Source&text=As%20a%20result%2C%20businesses%20use,replicate%20transactional%20changes%20to%20data.), the below are some key benefits I would like to bring on the table:
+
+#### Reduced Latency
+
+By capturing changes as they occur, CDC minimizes data latency compared to traditional batch processing. Since collection and transformation happens in real-time with CDC, organizations can store the data in data warehouses for better business intelligence. This is particularly advantageous for applications and analytics that require up-to-date information.
+
+#### Simplified Change Tracking
+
+CDC simplifies the tracking of changes in the source data. This includes capturing inserts, updates, and deletes, providing a comprehensive view of how the data evolves over time.
+
 The database, which we listen to, remains intact as we do not add any triggers or log tables. So that we don't need to touch the legacy system since it's usually risky, sometime it leads to the performance degradation of the database.
+
+#### Enhance data security
+
+One of the great benefits of change data capture is that it empowers you to manage data accessibility as well. This enhances data security as you can control the flow of data based on the sensitivity of the collected information. Such practices ensure that you comply with the different data protection laws of different countries.
 
 ### Drawbacks
 
@@ -154,3 +171,4 @@ Building distributed event-driven systems is always challenging, since Event Sou
 - [Change Data Capture (CDC) - Pattern Or antipattern? – avenga](https://www.avenga.com/magazine/change-data-capture/)
 - [Listen to Database changes with apache Kafka](https://medium.com/geekculture/listen-to-database-changes-with-apache-kafka-35440a3344f0)
 - [Data Ingestion Patterns - Medium](https://medium.com/the-modern-scientist/the-art-of-data-ingestion-powering-analytics-from-operational-sources-467552d6c9a2)
+- [Benefit of CDC](https://hevodata.com/learn/benefits-of-change-data-capture/#:~:text=CDC%20Definition,-Image%20Source&text=As%20a%20result%2C%20businesses%20use,replicate%20transactional%20changes%20to%20data.)
