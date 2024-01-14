@@ -18,9 +18,9 @@ There are various way to conduct data ingestion, depends on the strategy we want
 - [Considering implementing CDC?](#considering-implementing-cdc)
   - [Benefits](#benefits)
   - [Drawbacks](#drawbacks)
-  - [CDC per data source](#cdc-per-data-source)
-  - [Data meaning](#data-meaning)
-  - [Schema changes](#schema-changes)
+    - [CDC per data source](#cdc-per-data-source)
+    - [Data meaning](#data-meaning)
+    - [Schema changes](#schema-changes)
 - [CDC vs Event sourcing](#cdc-vs-event-sourcing)
   - [Shared Goals for Event Sourcing and Change Data Capture](#shared-goals-for-event-sourcing-and-change-data-capture)
   - [The differences](#the-differences)
@@ -96,7 +96,7 @@ The database, which we listen to, remains intact as we do not add any triggers o
 
 Along with the benefits, there are some drawbacks that we need to consider before implementing CDC.
 
-### CDC per data source
+#### CDC per data source
 
 Each type of database requires a different approach to CDC. There are different mechanisms for each source and the cannot be unified for multiple sources with different characteristics.
 
@@ -104,7 +104,7 @@ As if we want to implement an in-house CDC solution, we need to implement a diff
 
 For example, Debezium captures changes from MySQL by watching its [binlog](https://dev.mysql.com/doc/refman/5.7/en/replication-howto-masterbaseconfig.html), but for PostgreSQL the service listens to DB's [WaL (Write ahead Log)](https://www.postgresql.org/docs/9.6/runtime-config-wal.html) for replication, and many more connectors for other databases. (See [Debezium connectors](https://debezium.io/documentation/reference/connectors/index.html))
 
-### Data meaning
+#### Data meaning
 
 Relational database sources are often denormalized and modified to allow a fast read or write operations based on concrete usage scenarios.
 
@@ -112,7 +112,7 @@ Capturing this kind of data may result in a hard to understand set of data, whic
 
 On the other hand, many changes in database tables may not be related to the actual business logic triggering them, but the maintenance operations or reporting activities. This create noises.
 
-### Schema changes
+#### Schema changes
 
 Sometimes datasource schema changes occurred, CDC just keeps picking out the data change including new columns' values. Without being noticed or monitored, we cannot have a full control over the data quality for the downstream tasks.
 
