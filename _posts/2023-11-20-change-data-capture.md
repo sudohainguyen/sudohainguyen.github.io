@@ -75,7 +75,7 @@ The idea of CDC is to observe what is happening in the data layer of the applica
 To implement the CDC, we will need to add two items in our pipeline:
 
 - Service that listens for changes over rows in the database
-- Service that stream the data
+- Service that streams the data
 
 ![Concept to implement CDC](/assets/img/cdc-concept.png)
 <p align = "center">
@@ -117,21 +117,21 @@ Along with the benefits, there are some drawbacks that we need to consider befor
 
 Each type of database requires a different approach to CDC. There are different mechanisms for each source and the cannot be unified for multiple sources with different characteristics.
 
-As if we want to implement an in-house CDC solution, we need to implement a different solution for each data source, because each database has its own way to produce the change events.
+As if we want to implement an in-house CDC solution, we need to implement a different solution for each data source, because each database has its own way of producing the change events.
 
 For example, Debezium captures changes from MySQL by watching its [binlog](https://dev.mysql.com/doc/refman/5.7/en/replication-howto-masterbaseconfig.html), but for PostgreSQL the service listens to DB's [WaL (Write ahead Log)](https://www.postgresql.org/docs/9.6/runtime-config-wal.html) for replication, and many more connectors for other databases. (See [Debezium connectors](https://debezium.io/documentation/reference/connectors/index.html))
 
 #### Data meaning
 
-Relational database sources are often denormalized and modified to allow a fast read or write operations based on concrete usage scenarios.
+Relational database sources are often denormalized and modified to allow fast read or write operations based on concrete usage scenarios.
 
-Capturing this kind of data may result in a hard to understand set of data, which is far away from the concept of a DTO.
+Capturing this kind of data may result in a hard-to-understand set of data, which is far away from the concept of a DTO.
 
-On the other hand, many changes in database tables may not be related to the actual business logic triggering them, but the maintenance operations or reporting activities. This create noises.
+On the other hand, many changes in database tables may not be related to the actual business logic triggering them, but to the maintenance operations or reporting activities. This creates noises.
 
 #### Schema changes
 
-Sometimes datasource schema changes occurred, CDC just keeps picking out the data change including new columns' values. Without being noticed or monitored, we cannot have a full control over the data quality for the downstream tasks.
+Sometimes data source schema changes occur, CDC just keeps picking out the data change including new columns' values. Without being noticed or monitored, we cannot have full control over the data quality for the downstream tasks.
 
 ![Collaboration](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMja3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fa%3D%3D)
 
