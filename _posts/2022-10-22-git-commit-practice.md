@@ -10,6 +10,7 @@ tags: [engineering, craftmanship]
 If you’ve been actively using git in your daily work, you might be familiar with the concept of Git commit convention. However, have you considered the potential benefits these messages hold for your future and the success of your team? In this article, I will explain how incorporating Git commit convention into your everyday routine can greatly enhance your team’s productivity.
 
 **Quick access:**
+
 - [What does convention mean?](#what-does-convention-mean)
 - [How about git commit convention?](#how-about-git-commit-convention)
 - [My favorite convention](#my-favorite-convention)
@@ -36,7 +37,7 @@ On the other hand, when your team build a library, product, or service, it is im
 
 ## My favorite convention
 
-```
+``` text
 <COMMIT_TYPE>: <COMMIT_MESSAGE> (<ISSUE_ID>)
 
 - details 1
@@ -54,7 +55,7 @@ Signed-off-by: <YOUR_NAME> <YOUR_EMAIL>
 
 Let’s see what I can do with the above rules, imagine I have these commit messages after running command `git log --pretty=format:"%s" HEAD~10..HEAD`
 
-```
+``` text
 chore: minor refactor
 test: add test case for gcs dest path builder
 chore: refactor mmfp modules
@@ -134,6 +135,6 @@ And this is the result:
 
 Doesn’t it look cool? I can easily generate a release note from the commit history. This is a great way to keep your users informed about the latest changes and improvements to your products.
 
-
 ## Conclusion
+
 This maybe looks simple but it is a good start to building up your team’s culture, furthermore, it might boost your team's productivity as well. I hope you can find this article useful and apply it to your daily basis. Thanks for reading!
