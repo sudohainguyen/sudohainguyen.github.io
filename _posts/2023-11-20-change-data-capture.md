@@ -3,7 +3,7 @@ layout: post
 title: "Change Data Capture (CDC) pattern: another real-time data ingestion approach."
 subtitle: "To listen all the changes."
 cover-img: https://images.unsplash.com/photo-1641510653579-84da19c3208b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMja3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fa%3D%3D
-thumbnail-img: https://images.unsplash.com/photo-1628116709703-c1c9ad550d36?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMja3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fa%3D%3D
+thumbnail-img: /assets/img/cdc-thumbnail.jpg
 tags: [data engineering]
 ---
 
