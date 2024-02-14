@@ -63,7 +63,7 @@ Having your own product seems to be a dream for every engineer, but it's not alw
 
 ## Core Skills Set of an MLOps Engineer
 
-![MLOps development lifecycle](https://ml-ops.org/img/mlops-loop-en.jpg)
+![MLOps development lifecycle](https://ml-ops.org/img/mlops-loop-en.jpg){: .mx-auto.d-block :}
 <p align = "center">
 MLOps development lifecycle (Source: ml-ops.org)
 </p>
