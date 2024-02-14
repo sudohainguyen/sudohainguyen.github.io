@@ -10,6 +10,7 @@ tags: [engineering, career, experience]
 To rapidly progress in your engineering career, it is advisable to learn from other engineers in your professional circle, such as colleagues, seniors, and friends especially when you are working on some immature area like MLOps. However, many individuals, myself included, often wonder how engineers from diverse companies, organizations, and countries approach their work without frequently changing their jobs. Engaging with open-source projects is an effective solution to this challenge. By contributing to such projects, you can gain valuable exposure to a variety of engineering perspectives and practices, which can broaden your understanding and improve your skills.
 
 **Quick access:**
+
 - [What does the term Open Source projects mean?](#what-does-the-term-open-source-projects-mean)
 - [Pros and Cons](#pros-and-cons)
   - [The opportunities](#the-opportunities)
@@ -17,13 +18,9 @@ To rapidly progress in your engineering career, it is advisable to learn from ot
 - [How to get started?](#how-to-get-started)
 - [Conclusion](#conclusion)
 
-
-
-
 ## What does the term Open Source projects mean?
-<p align = "center">
-<img src = "https://images.unsplash.com/photo-1569017388730-020b5f80a004?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80">
-</p>
+
+![Unsplash](https://images.unsplash.com/photo-1569017388730-020b5f80a004?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80){: .mx-auto.d-block :}
 <p align = "center">
 Photo by <a href="https://unsplash.com/@lukesouthern?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luke Southern</a> on <a href="https://unsplash.com/photos/4kCGEB7Kt4k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
@@ -43,9 +40,9 @@ In my own experience, I had a chance to learn about [Git Commit Principles](http
 
 ### The challenges
 
-Working on open-source projects can present certain challenges, such as finding the time to contribute while managing other obligations, such as work or personal projects. While contributing to community projects can be a valuable experience, it is important to prioritize your primary job as it is likely to have greater significance in terms of career progression and financial stability. Additionally, contributing to open-source projects can involve a steep learning curve, especially if you are new to the project or its associated technologies. Attempting to learn too many new things simultaneously can be draining and lead to feeling overwhelmed, which may compromise your ability to balance your workload across different projects.
+Navigating open-source projects poses several challenges. These include juggling contributions alongside other commitments like work or personal projects. While involvement in community initiatives offers valuable experiences, it's crucial to prioritize primary employment, given its greater impact on career advancement and financial stability. Moreover, engaging in open-source endeavors can entail a steep learning curve, particularly for newcomers to the project or its technologies. Trying to absorb too much information at once can prove overwhelming and compromise workload management across different projects.
 
-Finally, open-source projects often have multiple contributors, each with their own priorities and agendas, which can lead to conflicts and competing priorities. In the past, I spent a few days refactoring some modules in a project. However, in the end sadly, my pull request was not deemed necessary by the owners and was left to become stale.
+Furthermore, open-source environments often harbor multiple contributors, each with their own agendas and priorities. This can result in conflicts and divergent interests. Reflecting on past experiences, I devoted several days to refactoring modules within a project, only to find my pull request deemed unnecessary by project owners, ultimately languishing and becoming stale.
 
 ## How to get started?
 
