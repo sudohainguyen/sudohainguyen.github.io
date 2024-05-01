@@ -4,7 +4,7 @@ title: "Lessons learned contributing to Open Source projects"
 subtitle: Why don't you try?
 cover-img: /assets/img/passion.jpg
 thumbnail-img: /assets/img/oss-thumbnail.jpeg
-tags: [engineering, career, experience]
+tags: [career, experience]
 ---
 
 To rapidly progress in your engineering career, it is advisable to learn from other engineers in your professional circle, such as colleagues, seniors, and friends especially when you are working on some immature area like MLOps. However, many individuals, myself included, often wonder how engineers from diverse companies, organizations, and countries approach their work without frequently changing their jobs. Engaging with open-source projects is an effective solution to this challenge. By contributing to such projects, you can gain valuable exposure to a variety of engineering perspectives and practices, which can broaden your understanding and improve your skills.
