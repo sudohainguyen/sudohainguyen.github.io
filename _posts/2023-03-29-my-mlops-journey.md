@@ -18,8 +18,10 @@ In today's data-driven world, the demand for machine learning models has skyrock
   - [Infrastructure Management](#infrastructure-management)
   - [Continuous Integration and Deployment](#continuous-integration-and-deployment)
 - [The challenges](#the-challenges)
-- [Personal obsevation](#personal-obsevation)
-- [Which is the better way to go: Dedicated vs Platform oriented?](#which-is-the-better-way-to-go-dedicated-vs-platform-oriented)
+- [Personal Observations](#personal-observations)
+- [Which is the Better Way to Go: Dedicated vs Platform Oriented?](#which-is-the-better-way-to-go-dedicated-vs-platform-oriented)
+  - [Dedicated Approach](#dedicated-approach)
+  - [Platform Oriented Approach](#platform-oriented-approach)
 - [Core Skills Set of an MLOps Engineer](#core-skills-set-of-an-mlops-engineer)
 - [Conclusion](#conclusion)
 
@@ -59,9 +61,37 @@ By establishing CI/CD pipelines, I enabled the team to deliver new features and 
 
 Having your own product seems to be a dream for every engineer, but it's not always going in a happy way. I have to face a lot of challenges along the way, from technical to non-technical aspects.
 
-## Personal obsevation
+## Personal Observations
 
-## Which is the better way to go: Dedicated vs Platform oriented?
+Throughout my journey, I have observed that while technical skills are crucial, soft skills such as communication, collaboration, and adaptability play an equally important role. Being able to explain complex technical concepts to non-technical stakeholders and working collaboratively with cross-functional teams are essential for success in the MLOps field.
+
+## Which is the Better Way to Go: Dedicated vs Platform Oriented?
+
+This is a common question that many organizations face when implementing MLOps. Here are some points to consider:
+
+### Dedicated Approach
+
+- **Pros**:
+  - Tailored solutions to specific problems.
+  - Closer collaboration with data scientists and operations teams.
+  - Faster iteration and experimentation.
+
+- **Cons**:
+  - Higher resource requirements.
+  - Potential for siloed knowledge and expertise.
+
+### Platform Oriented Approach
+
+- **Pros**:
+  - Centralized infrastructure and tools.
+  - Easier to maintain and scale.
+  - Promotes standardization and best practices.
+
+- **Cons**:
+  - May not be as flexible for specific use cases.
+  - Requires significant upfront investment and planning.
+
+Ultimately, the choice between a dedicated and platform-oriented approach depends on the specific needs and maturity of the organization. In my experience, a hybrid approach often works best, leveraging the strengths of both methods to create a flexible and scalable MLOps environment.
 
 ## Core Skills Set of an MLOps Engineer
 
@@ -84,4 +114,6 @@ Whoever you are working as, a dedicated engineer or a platform engineer, to exce
 
 ## Conclusion
 
-TBD
+Being an MLOps engineer is a dynamic and challenging role that requires a blend of technical and soft skills. Whether you are building internal platforms, collaborating with data scientists, managing infrastructure, or establishing CI/CD pipelines, the goal is to enable efficient and scalable machine learning operations.
+
+As organizations continue to adopt machine learning, the role of MLOps engineers will become increasingly critical. Embracing the challenges and continuously learning and adapting will pave the way for success in this exciting field.
