@@ -17,7 +17,7 @@ This is where DBT (short for Data Build Tool) comes into play. Fishtown Analytic
 
 ## Key Features of DBT: Why It Stands Out
 
-So, what makes DBT so special? Here are some of its standout features:
+So, what makes DBT so special? Here are some of its standout features that I am impressed the most with:
 
 - **SQL-Based Transformations**: DBT lets you write transformations in SQL, which means data analysts can jump right in without needing to learn a new language such as Python or Spark. It's like giving a carpenter a shiny new hammer—they already know how to use it, and now they can build even better things.
 
@@ -26,10 +26,6 @@ So, what makes DBT so special? Here are some of its standout features:
     **Example**: Let's say you are looking for a complex SQL function that calculates the average order value for a given customer. Instead of writing the same function multiple times, you can create a reusable model in DBT. This model can be referenced in other models, and other folks on your team can use it without having to rewrite the same logic.
 
     In the future, when the business requirements change, and you need to update the formula, you only need to do it in one place. This modular approach saves time and reduces human-prone errors.
-
-- **Collaboration**: DBT integrates seamlessly with Git, so collaborative work is built right in. No more worrying about who made what changes and when—everything is tracked, and multiple team members can work together smoothly.
-
-- **Testing and Documentation**: DBT includes a built-in testing framework to ensure your data quality remains top-notch. Plus, it can automatically generate documentation, making it easier to understand and share your data models.
 
 - **Simplified Data Persistence**: One of the significant advantages for data analysts using DBT is the reduced need to worry about the specifics of persisting data models effectively. Analysts only need to understand the concept of materializations—such as views, tables, and incremental models. The rest is handled by DBT plugins that run on top of SQL engines. This allows analysts to focus on transforming data rather than on the intricacies of data storage.
 
@@ -93,28 +89,30 @@ So, what makes DBT so special? Here are some of its standout features:
 
     With this setup, DBT ensures that the `incremental_sales` table is updated incrementally, only processing new orders based on the `order_date` field. This reduces the need for extensive SQL knowledge about managing incremental updates, letting you focus on analyzing and transforming the data.
 
+- And many more, such as **embracing collaboration**, **testable sql**, **version control**, **dependency management**, and **data lineage tracking** as described in the [DBT documentation](https://docs.getdbt.com/docs/introduction).
+
 ## Comparing DBT to Conventional Data Modeling Approaches
 
-Let's take a look at how DBT stacks up against traditional methods:
+In the old days, **traditional ETL processes** were a nightmare. They were complex, rigid, and often required a lot of custom scripting. Maintenance was a pain, and scalability was a constant challenge.
 
-- **Traditional ETL Tools**: In the old days, ETL processes were a nightmare. They were complex, rigid, and often required a lot of custom scripting. Maintenance was a pain, and scalability was a constant challenge.
-
-    In my previous company, we implemented tons of SQL scripts to transform data and it was hard to maintain all of them. When the performance issues arose to the data warehouse, we faced a lot of challenges to trace and capture queries patterns, many SQL logic was duplicated and could have been reused, but we didn't have a good way to manage them.
+In my previous company, we implemented tons of SQL scripts to transform data and it was hard to maintain all of them. When the performance issues arose to the data warehouse, we faced a lot of challenges to trace and capture queries patterns, many SQL logic was duplicated and could have been reused, but we didn't have a good way to manage them.
 
 ![Deal with custom SQL](https://images.unsplash.com/photo-1517669375942-946a1f02d705?q=80&w=4888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D){: .mx-auto.d-block :}
 <p align = "center">
-Deal with custom SQL. (Image by <a href="https://unsplash.com/@elevantarts">christopher lemercier</a> on Unsplash)
+Deal with ETL scripts. (Image by <a href="https://unsplash.com/@elevantarts">christopher lemercier</a>)
 </p>
 
-- **DBT's Approach**: DBT flips the script by focusing on SQL-based transformations. Instead of writing endless custom scripts, you can create incremental models and materializations that are easier to manage and optimize. Debugging is straightforward, and testing is built right into the workflow.
+On the other hand, beside SQL scripts, we also used various tools like [Pandas](https://pandas.pydata.org/), [Spark](https://spark.apache.org/), or even custom scripts to transform data. Although these tools are powerful, they require a steep learning curve and are not always the best fit for data analysts/scientists who are more comfortable with SQL.
 
-- **Modular Development**: Unlike conventional ETL tools, DBT promotes a modular development approach. You can break down your data transformation processes into smaller, manageable pieces. This not only makes the development process more organized but also enhances reusability and maintainability of the code.
+As **DBT's Approach**, it flips the script by focusing on SQL-based transformations. Instead of writing endless custom scripts, you can create incremental models and materializations that are easier to manage and optimize. Debugging is straightforward, and testing is built right into the workflow.
+
+Unlike conventional SQL workflows, DBT promotes a **modular development** approach. You can break down your SQL into smaller, manageable modules. This not only makes the development process more organized but also enhances reusability and maintainability of the code across different projects or teams.
 
 ## Common Misconceptions About DBT
 
 As with any popular tool, there are a few misconceptions about DBT that are worth clearing up. Let's tackle some of the most common ones:
 
-- **DBT is Not a Database**: Some people mistakenly believe that DBT is a database itself. In reality, DBT is a transformation tool that works on top of your existing data warehouse. It uses SQL to transform raw data into a more structured format, but it doesn't store data on its own.
+- **DBT is Not a Database**: Some folks mistakenly believe that DBT is a database itself, where it would store and serve data as a server. In reality, DBT is a tool that works on top of your existing data warehouse and uses SQL to transform raw data into a more structured format, but it doesn't store data on its own.
 
 - **DBT is Not a Data Transformation Engine**: Another common misconception is that DBT performs the actual data transformations. DBT orchestrates the transformations, but the heavy lifting is done by your data warehouse's SQL engine. For example, if you're using Snowflake, Redshift, or BigQuery, those platforms execute the SQL transformations defined by DBT.
 
@@ -127,11 +125,5 @@ As with any popular tool, there are a few misconceptions about DBT that are wort
 In a nutshell, DBT was invented to tackle the common pain points in data transformation processes. By leveraging SQL, promoting modular code, integrating collaboration tools, and ensuring high data quality, DBT offers a fresh and efficient approach to building data models. Additionally, its ability to simplify data persistence allows data analysts to focus more on transforming data and less on storage details.
 
 If you're still using conventional methods, it might be time to give DBT a try. Dive into the documentation, explore the community forums, and see how DBT can transform your data workflows. Trust me, once you go DBT, you'll never want to go back.
-
-## Further Resources
-
-- [DBT Documentation](https://docs.getdbt.com/)
-- [DBT Tutorials](https://docs.getdbt.com/tutorial/setting-up)
-- [DBT Community](https://community.getdbt.com/)
 
 Happy data modeling!
