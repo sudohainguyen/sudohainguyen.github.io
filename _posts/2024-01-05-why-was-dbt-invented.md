@@ -9,6 +9,12 @@ tags: [data engineering, data analytics]
 
 If you've been hanging around the data engineering world, you've probably heard the buzz about DBT. But what's all the fuss about, and why was DBT even invented in the first place? Let's dive into the story behind DBT and how it's revolutionizing the way we build data models compared to the old-school methods.
 
+- [The Origins of DBT](#the-origins-of-dbt)
+- [Key Features of DBT: Why It Stands Out](#key-features-of-dbt-why-it-stands-out)
+- [Comparing DBT to Conventional Data Modeling Approaches](#comparing-dbt-to-conventional-data-modeling-approaches)
+- [Common Misconceptions About DBT](#common-misconceptions-about-dbt)
+- [Conclusion](#conclusion)
+
 ## The Origins of DBT
 
 Before DBT, data practitioners had to wrestle with some pretty gnarly problems. Think about it: data pipelines were complex beasts, cobbled together with various tools that didn't always play nice with each other. The traditional Extract, Transform, Load (ETL) processes were a major headache, often requiring custom scripts and a lot of manual work.
