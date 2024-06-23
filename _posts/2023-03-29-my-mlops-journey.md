@@ -2,7 +2,7 @@
 layout: post
 title: "My Journey as an MLOps Engineer"
 subtitle: "Challenging but rewarding"
-cover-img: /assets/img/mlops-cover.jpeg
+cover-img: https://images.unsplash.com/photo-1530645722516-a0c947925cf0?q=80&w=4608&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 thumbnail-img: /assets/img/mlops.jpeg
 tags: [engineering, career, experience]
 ---

@@ -7,7 +7,7 @@ thumbnail-img: /assets/img/dbt-thumbnail.png
 tags: [data engineering, data analytics]
 ---
 
-If you've been hanging around the data engineering world, you've probably heard the buzz about DBT. But what's all the fuss about, and why was DBT even invented in the first place? Let's dive into the story behind DBT and how it's revolutionizing the way we build data models compared to the old-school methods.
+If you've been hanging around the data engineering world, you've probably heard the buzz about DBT. But why was DBT even invented in the first place? Let's dive into the story behind DBT and how it's revolutionizing the way we build data models compared to the old-school methods.
 
 - [The Origins of DBT](#the-origins-of-dbt)
 - [Key Features of DBT: Why It Stands Out](#key-features-of-dbt-why-it-stands-out)
@@ -57,20 +57,13 @@ So, what makes DBT so special? Here are some of its standout features that I am 
     on conflict (order_id)
     do update set
     order_date = excluded.order_date,
-    order_amount = excluded.order_amount;
+    order_amount = excluded.order_amount
     ```
 
     Here's an example using DBT to create an incremental model:
 
     ```sql
     -- models/incremental_sales.sql
-    {{
-      config(
-        materialized='incremental',
-        incremental_strategy='upsert',
-        unique_key='order_id'
-      )
-    }}
 
     with new_orders as (
       select * from {{ ref('orders') }}
@@ -91,6 +84,8 @@ So, what makes DBT so special? Here are some of its standout features that I am 
       my_dbt_project:
         incremental_sales:
           materialized: incremental
+          incremental_strategy: upsert
+          unique_key: order_id
     ```
 
     With this setup, DBT ensures that the `incremental_sales` table is updated incrementally, only processing new orders based on the `order_date` field. This reduces the need for extensive SQL knowledge about managing incremental updates, letting you focus on analyzing and transforming the data.
@@ -122,14 +117,12 @@ As with any popular tool, there are a few misconceptions about DBT that are wort
 
 - **DBT is Not a Data Transformation Engine**: Another common misconception is that DBT performs the actual data transformations. DBT orchestrates the transformations, but the heavy lifting is done by your data warehouse's SQL engine. For example, if you're using Snowflake, Redshift, or BigQuery, those platforms execute the SQL transformations defined by DBT.
 
-- **DBT is Not a Data Visualization Tool**: DBT helps you prepare and clean your data, but it's not designed for data visualization. Tools like Tableau, Looker, or Power BI are used for visualizing the data models that DBT helps create.
-
 - **DBT is Not a One-Size-Fits-All Solution**: While DBT is powerful, it might not be the best fit for every scenario. For example, if your data transformations require complex procedural logic that's difficult to express in SQL, you might need to complement DBT with other tools or custom scripts.
 
 ## Conclusion
 
 In a nutshell, DBT was invented to tackle the common pain points in data transformation processes. By leveraging SQL, promoting modular code, integrating collaboration tools, and ensuring high data quality, DBT offers a fresh and efficient approach to building data models. Additionally, its ability to simplify data persistence allows data analysts to focus more on transforming data and less on storage details.
 
-If you're still using conventional methods, it might be time to give DBT a try. Dive into the documentation, explore the community forums, and see how DBT can transform your data workflows. Trust me, once you go DBT, you'll never want to go back.
+If you're still using conventional methods, it might be time to give DBT a try. Dive into the documentation, explore the community forums, and see how DBT can transform your data workflows.
 
 Happy data modeling!
