@@ -3,7 +3,7 @@ layout: post
 title: "Why DBT Was Invented and How It Helps Data Practitioners"
 subtitle: "Compared to Conventional Ways to Build Data Models"
 cover-img: https://images.unsplash.com/photo-1631106254201-ffbee2305c5b?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-thumbnail-img: https://images.unsplash.com/photo-1631106254201-ffbee2305c5b?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+thumbnail-img: /assets/img/dbt-thumbnail.png
 tags: [data engineering, data analytics]
 ---
 
