@@ -7,7 +7,7 @@ thumbnail-img: /assets/img/dbt-thumbnail.png
 tags: [data engineering, data analytics]
 ---
 
-If you've been hanging around the data engineering world, you've probably heard the buzz about DBT. But why was DBT even invented in the first place? Let's dive into the story behind DBT and how it's revolutionizing the way we build data models compared to the old-school methods.
+You have probably heard the buzz about DBT in data engineering lately, but why was DBT even invented in the first place? I was struggling with pure SQL scripts but now I have been using it as my day-to-day work, let me share you how it’s revolutionizing the way we should build data models compared to the old-school methods.You have probably heard the buzz about DBT in data engineering lately, but why was DBT even invented in the first place? I was struggling with pure SQL scripts but now I have been using it as my day-to-day work, let me share you how it’s revolutionizing the way we should build data models compared to the old-school methods.
 
 - [The Origins of DBT](#the-origins-of-dbt)
 - [Key Features of DBT: Why It Stands Out](#key-features-of-dbt-why-it-stands-out)
