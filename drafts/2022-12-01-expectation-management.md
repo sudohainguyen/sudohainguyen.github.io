@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: "Lesson learned: Expectation Management"
 subtitle: "We all aim high, but are we aiming the same point?"
@@ -41,4 +41,4 @@ Failing to manage expectations can have serious repercussions. Stakeholders may 
 ## Conclusion
 
 Expectation management is essential for successful product management. Product teams should be honest and transparent with stakeholders, provide regular progress updates, and create a timeline to keep everyone on the same page. By following these best practices, teams can ensure that expectations are managed properly and that the product meets customer needs.
-
+ -->

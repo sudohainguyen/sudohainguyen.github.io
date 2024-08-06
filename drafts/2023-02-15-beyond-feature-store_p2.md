@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: "Beyond Feature Store - Part 2: Feature Platform"
 subtitle: Which has maturity
@@ -54,4 +54,4 @@ Beside feature store, which is the core component of Feature Platform, there are
 - OpenLineage: is an open platform for collection and analysis of data lineage. It tracks metadata about datasets, jobs, and runs, giving users the information required to identify the root cause of complex issues and understand the impact of changes.
 
 ## Conclusion
-To summarize, there are a lot of problem to tackle for Feature Platform to get mature enough for self-serving capability. Consequently, may be self-serving is not the true north of FP? Should it be operated as a team as product instead, like we already have with Data Platform.
+To summarize, there are a lot of problem to tackle for Feature Platform to get mature enough for self-serving capability. Consequently, may be self-serving is not the true north of FP? Should it be operated as a team as product instead, like we already have with Data Platform. -->
