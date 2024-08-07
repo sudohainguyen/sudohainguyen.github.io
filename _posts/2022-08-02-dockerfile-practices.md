@@ -12,6 +12,7 @@ Docker has revolutionized the way we build, package, and deploy applications. It
 In this post, we'll explore some best practices for writing Dockerfiles that will help you build better images and also share my own experience in building Docker images for my projects.
 
 **Quick access:**
+
 - [1. Background](#1-background)
   - [1.1. What is a Dockerfile?](#11-what-is-a-dockerfile)
   - [1.2. Why is it important to build a good image?](#12-why-is-it-important-to-build-a-good-image)
@@ -53,18 +54,21 @@ In this section, we'll explore some best practices for writing Dockerfiles that 
 Begin with a minimal foundational image that includes only the essential dependencies required by your application. By utilizing a smaller image, you can decrease the overall image size and enhance the startup time of your application.
 
 Instead of:
+
 ``` Dockerfile
 FROM python:3.9
 ...
 ```
 
 Explicitly specify the base image with suffix:
+
 ``` Dockerfile
 FROM python:3.9-slim
 ...
 ```
 
 Some common base image types include:
+
 - **Slim**: The "slim" base image is a lightweight Debian-based image stripped of unnecessary packages, resulting in smaller image sizes.
   - Pros: Smaller size, familiar Debian environment.
   - Cons: Limited package availability compared to full Debian images.
@@ -175,13 +179,12 @@ CMD ["uvicorn", "app.main:app"]
 
 or else if you have a lot of files to copy, you can use `.dockerignore` file to ignore unnecessary files with patterns.
 
-```
+``` bash
 # .dockerignore
 tests/
 docs
 .env.*
 ```
-
 
 ## 2.5. Some other minor tips
 
@@ -263,6 +266,7 @@ CMD ["python3", "app.py"]
 # 3. Working with Dockerfiles effectively
 
 ## 3.1. Use linting tools
+
 Probably we don't remember all the good practices to apply to our daily work, until we actually need them. Then we will have to google and find out the best practices. So, how can we maintain the quality of our Dockerfiles consistently? The answer is linting tools.
 
 Linting tools are tools that analyze your code and provide feedback on potential issues. They can help you identify and fix problems before they become a problem. My favorite linting tool for Dockerfiles is [hadolint](https://github.com/hadolint/hadolint) which is a linter for Dockerfiles that checks for common errors and best practices and can be used as a command-line tool or integrated into your CI/CD pipeline as well. Let's see how it works, assume we have a bad Dockerfile like section [2.4](#24-dont-include-unnecessary-files)), hadolint will tell us what is wrong with it:
@@ -291,6 +295,7 @@ docker run --rm -i hadolint/hadolint < Dockerfile
 ```
 
 ## 3.2. Evaluate your changes
+
 After applying good practices to improve your Dockerfiles, how can you know your changes are effective?
 I frequently use [dive](https://github.com/wagoodman/dive) to measure the efficiency of your Dockerfile by analyzing the image layer by layer, displaying the file tree and highlighting the files that are taking up the most space. Below is an example of how I integrate `dive` into my team's Gitlab CI pipelines to analyze built Docker images before pushing to the registry:
 
@@ -313,8 +318,10 @@ analyze-image:
   tags:
     - docker-build
 ```
+
 And this is the result:
-```
+
+``` bash
 Status: Downloaded newer image for wagoodman/dive:latest
   Using default CI config
 Image Source: docker://my_image
@@ -337,6 +344,7 @@ Voila! We can see there is still more room for improvement.
 Hope this can give you some idea to improve your Dockerfiles, you can ensure that your images are optimized for performance, security, and scalability. Hence you can create better applications and save your own time and effort in the long run.
 
 # References
+
 - [https://docs.docker.com/get-started/09_image_best/](https://docs.docker.com/get-started/09_image_best/)
 - [https://medium.com/@rdsubhas/docker-for-development-common-problems-and-solutions-95b25cae41eb](https://medium.com/@rdsubhas/docker-for-development-common-problems-and-solutions-95b25cae41eb)
 - [https://pythonspeed.com/articles/base-image-python-docker-images/](https://pythonspeed.com/articles/base-image-python-docker-images/)
