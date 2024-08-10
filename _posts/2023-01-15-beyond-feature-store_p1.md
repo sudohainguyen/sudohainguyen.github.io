@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Beyond Feature Store - Part 1: What we all desire"
+title: "Beyond Feature Store: What we all desire"
 subtitle: Yes, we need Feature Store, but how to use?
 thumbnail-img: /assets/img/platform-thumbnail.jpeg
 tags: [mlops,data engineering]
@@ -12,6 +12,7 @@ We have been working with Machine Learning models, cooking raw data into golden 
 2. We desire more, but what are our expectations?
 
 **Quick access:**
+
 - [The rewind](#the-rewind)
   - [What are the features in Machine Learning?](#what-are-the-features-in-machine-learning)
   - [So, What is the feature store?](#so-what-is-the-feature-store)
@@ -19,13 +20,12 @@ We have been working with Machine Learning models, cooking raw data into golden 
 - [The state](#the-state)
 - [Conclusion](#conclusion)
 
-
 ## The rewind
 
 Ok first let's go through what we already know about feature store.
 
 <p align = "center">
-<img src = "https://en.meming.world/images/en/7/7a/It%27s_Rewind_time.jpg">
+<img src = "https://en.meming.world/images/en/7/7a/It%27s_Rewind_time.jpg" alt="Rewind time meme">
 </p>
 <p align = "center">
 </p>
@@ -42,7 +42,7 @@ A feature is a data point with the following criteria:
 `entity` is obviously the first thing we should look at, this is a primary object we're working on to collect data from. The `cut off timestamp` determines the latest timestamp at which the data of an entity is considered valid for feature calculation. Any data beyond this specific timestamp is excluded before performing feature calculations.
 
 <p align = "center">
-<img src = "https://featuretools.alteryx.com/en/stable/_images/retail_ct.png">
+<img src = "https://featuretools.alteryx.com/en/stable/_images/retail_ct.png" alt="Cut Off Timestamp illustration">
 </p>
 <p align = "center">
 Cut Off Timestamp illustration (Source: Featuretools documentation)
@@ -55,6 +55,7 @@ Cut Off Timestamp illustration (Source: Featuretools documentation)
 Features play a crucial role in machine learning, they expose complex patterns from entities, such as user transaction behaviour, for ML models to learn and make predictions. The quality of features mostly has a major impact on the performance of a model. We obviously met this term `Garbage in garbage out` since the day we involved in the ML world. As a result, Data Scientists usually spend significant time and effort, back and forth selecting and engineering features.
 
 ### So, What is the feature store?
+
 As it's called, a feature store is `an abstract layer` working as a place where all features are stored and can be served from. Feature store makes sure users can get the features correctly as defined above, without duplication.
 
 Technically, a feature store is combined by sub-components which are well defined in this [blog](https://www.tecton.ai/blog/what-is-a-feature-store/). We can see each one manage a corresponding flow to end up serving features in various ways to meet users' needs, with additional management ability.
@@ -78,8 +79,8 @@ Consequently, the team can have more capable of focusing on other critical parts
 2. Business analysis: by pruning time-consuming tasks, there will be more room for conducting analysis in deep with less distraction from engineering stuff.
 3. Pipeline optimization: With the independence of feature store, we can less care where we have to produce clean data to fit into feature engineering pipelines. There is always more room for optimization in deep to save operational and computational costs by pursuing better data engineering practices (data lakehouse, query engine, etc..) to serve the data in a more efficient way.
 
-
 ## The state
+
 Thanks to the promising functionalities feature stores provide, it is gaining attraction from organizations to implement into their ML system, but most of the time there is still a struggle that stakeholders find hard to start implementing the component.
 
 Various new concepts to get familiar for both managers and team members, in order to finalize a true north to follow. More collaboration will be also required, based on the new concepts, to make things work smoothly.
